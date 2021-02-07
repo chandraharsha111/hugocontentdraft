@@ -21,7 +21,7 @@ draft: false
    - Bachelors degree in Computer Science from SRM University - 2015
 
 #### Interests 
+   - Software Development
    - Economics 
    - History
-   - Investing
-   - Software Development
+   - Psychology

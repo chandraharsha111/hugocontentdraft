@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2020-11-26T21:59:09-06:00
+date = 2020-11-25T21:59:09-06:00
 title = "Book Summaries and Investing Basics for Active Investing"
 description = ""
 slug = ""

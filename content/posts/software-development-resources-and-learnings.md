@@ -1,8 +1,8 @@
 +++ 
 draft = false
 date = 2020-11-28T13:16:34-06:00
-title = ""
-description = "Software Development Resources"
+title = "Software Development Resources"
+description = ""
 slug = ""
 authors = []
 tags = []
@@ -18,7 +18,7 @@ series = []
   - [Bob Martin](http://cleancoder.com/products)
   - [Martin Flower](https://martinfowler.com/)
   
-# Videos
+# Basic Introduction Videos
 
   - [Virtualization](https://www.youtube.com/watch?v=FZR0rG3HKIk&list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ&index=7)
   - [Kubernetes Vs Docker](https://www.youtube.com/watch?v=2vMEQ5zs1ko)
@@ -33,12 +33,8 @@ series = []
 
 # Dev Resources 
 
- -[Ripgrep](https://github.com/BurntSushi/ripgrep)
- -[Brew](https://brew.sh/) 
- -[Heap Analysis](https://gceasy.io/)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep)
+- [Brew](https://brew.sh/) 
+- [Heap Analysis](https://gceasy.io/)
 - [Host Hugo on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
-  
-### Heap Terms 
-  - Xmx - maximum memory allocation pool for a Java virtual machine (JVM)
-  - Xms - initial memory allocation pool for JVM 
-  - Xmn - young generation heap size
+- [Oh-my-zsh](https://ohmyz.sh/#install)

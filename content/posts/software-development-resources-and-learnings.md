@@ -12,14 +12,12 @@ series = []
 +++
 
 # Blogs and websites
- 
   - [Dr Fawcett](https://jimfawcett.github.io/JimFawcett.html)
   - [Dr KevinDu](http://www.cis.syr.edu/~wedu/)
   - [Bob Martin](http://cleancoder.com/products)
   - [Martin Flower](https://martinfowler.com/)
   
 # Basic Introduction Videos
-
   - [Virtualization](https://www.youtube.com/watch?v=FZR0rG3HKIk&list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ&index=7)
   - [Kubernetes Vs Docker](https://www.youtube.com/watch?v=2vMEQ5zs1ko)
   - [Containers Vs VM](https://www.youtube.com/watch?v=cjXI-yxqGTI&list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ)
@@ -32,7 +30,6 @@ series = []
 
 
 # Dev Resources 
-
 - [Ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Brew](https://brew.sh/) 
 - [Heap Analysis](https://gceasy.io/)

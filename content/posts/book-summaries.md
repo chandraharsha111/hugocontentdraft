@@ -16,7 +16,6 @@ Compound Interest is the eighth wonder of the world. He who understand it, earns
 ```
 
 # Intelligent Investor
-
  - Stocks do well when inflation is moderate, bad when low, erratic when high inflation
  - Treasury bonds with no tax to combat inflation like Public Provident Fund(India) - about 10% 
  - Adequate but not excessive diversification
@@ -123,17 +122,12 @@ Compound Interest is the eighth wonder of the world. He who understand it, earns
 
 
 # Charlie Munger:  
-- Humility – Knowing area of competency (edge of are of competency) – being humble 
+- Humility – Knowing area of competency (edge of are of competency)
 - Common Sense – Operate over a broad range of aspects without making any blunders 
 - Identifying folly(foolishness) and avoid it
 - Tackle things by inverting or cancelling options to problems – reasoning out to remove obvious things 
 - Having Ideas or collect ideas, strategies, structures, inanities (a nonsensical remark or action) 
-- Getting to know about human nature or psychology can be pretty useful in capitalistic nature in US (can know if more items can be sold etc by knowing human nature)
-- Few major opportunities in life time – don’t hang back when you find those 
-- *Secret to happy life* 
-   - Don't have envy
-   - Don’t feel sorry for yourself ever in-spite of troubles 
-   - Live below your means, 
-   - Deal with reliable people
-   - Do what you are supposed to
+- Getting to know about human nature or psychology can be pretty useful in capitalistic nature in the US
+- Dont hang back when you find few major opportunities in life time 
+- [Secret to happy life](https://www.youtube.com/watch?v=_ZCfNAl6DWE)
   

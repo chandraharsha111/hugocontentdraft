@@ -12,7 +12,7 @@ series = []
 +++
 
  ```yaml
-  Writing this blog post on my key learnings from one of the best investing book for Active Investors 
+   Learnings from Phil Fisher
  ```
 ## Common stocks and uncommon profits 
  - Finding an outstanding company and staying with it through fluctuations could be far more profitable than buying cheap and selling dear 

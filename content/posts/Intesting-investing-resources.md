@@ -33,7 +33,9 @@ series = []
  - [Ride of a lifetime](https://www.amazon.com/Ride-Lifetime-Lessons-Learned-Company/dp/0399592091)
  - [Poor Charlies Almanack](https://www.amazon.com/Poor-Charlies-Almanack-Charles-Expanded/dp/1578645018)
  - [Value Investing from Graham to Buffet](https://www.amazon.com/Value-Investing-Graham-Buffett-Beyond/dp/0471463396)
- - [Great crash of 1929](https://en.wikipedia.org/wiki/The_Great_Crash,_1929)
+ - [Great crash of 1929](https://en.wikipedia.org/wiki/The_Great_Crash,_1929) 
+ - [Nick sleep letters](https://igyfoundation.org.uk/wp-content/uploads/2021/03/Full_Collection_Nomad_Letters_.pdf)
+ - [Psychology of money](https://www.collaborativefund.com/blog/the-psychology-of-money/)
 
  # To read
  - [100 to 1 in the stock market](https://www.amazon.com/100-Stock-Market-Distinguished-Opportunities/dp/1626540292)
@@ -46,10 +48,10 @@ series = []
  - [Real life MBA](https://www.amazon.com/Real-Life-MBA-Winning-Building-Growing-ebook/dp/B00OP1FIU2)
  - [Stress Test](https://www.amazon.com/Stress-Test-Reflections-Financial-Crises/dp/0804138613)
  - [Outsiders](https://www.goodreads.com/book/show/13586932-the-outsiders)
+ - [Richer Wiser Happier](https://www.williamgreenwrites.com/richer-wiser-happier/)
  
  
 # Videos 
-
   - [Charlie Munger](https://www.youtube.com/watch?v=S9HgIGzOENA)
   - [Warren Buffer](https://www.youtube.com/watch?v=NwwUb_QoF18)
   - [Li Lu](https://www.youtube.com/watch?v=y3c2PKupiu8)
@@ -58,15 +60,13 @@ series = []
   - [John Boggle](https://www.youtube.com/watch?v=3uJbHREmUs4)
 
 
-# Financial websites and Blogs 
-
+# Financial websites and blogs 
   - [Economic Principles Ray Dalio](https://economicprinciples.org/)
   - [Howard Marks memos](https://www.oaktreecapital.com/insights/howard-marks-memos)
   - [Monish Pobrai](http://www.chaiwithpabrai.com/)
   - [AshwathDamodaran](http://people.stern.nyu.edu/adamodar/New_Home_Page/home.htm)
   - [Phil Town](https://www.ruleoneinvesting.com/)
   - [Sanjay Bakshi](https://fundooprofessor.wordpress.com/)
-  - [Nick Sleep Letters](https://igyfoundation.org.uk/wp-content/uploads/2021/03/Full_Collection_Nomad_Letters.pdf)
   - [Dataroma](https://www.dataroma.com/m/home.php)
   - [Value Line](https://www.valueline.com/)
   - [Magic Formula](https://www.magicformulainvesting.com/)
@@ -74,5 +74,7 @@ series = []
   - [Mr Money Mustache](https://www.mrmoneymustache.com/)
   - [Long River](https://www.longriverinv.com/blog/category/Investing)
 
-  
-  
+# Intersting blogs 
+- [Gates Notes](https://www.gatesnotes.com)
+- [Gap Minder](https://www.gapminder.org)
+- [USA facts](https://usafacts.org)

@@ -24,7 +24,7 @@ series = []
 #### How to Think About Investing
 - *The first investment primer was written by Aesop in 600 B.C. 
  He said, 'A bird in the hand is worth two in the bush.'
- Aesop forgot to say when you get the two in the bush and what interest rates are; 
+ Aesop forgot to say when you get the two birds from the bush and what interest rates are; 
  investing is simply figuring out your cash outlay (the bird in the hand) and comparing it to how many birds are in the bush and when you get them.*
  - Aesop’s investment axiom, thus expanded and converted into dollars, is immutable. It applies to outlays for farms, oil royalties, bonds, stocks, lottery tickets, and manufacturing plants. And neither the advent of the steam engine, the harnessing of electricity nor the creation of the automobile changed the formula one iota — nor will the Internet.
 - Common yardsticks such as dividend yield, the ratio of price to earnings or to book value, and even growth rates have nothing to do with valuation except to the extent they provide clues to the amount and timing of cash flows into and from the business. Indeed, growth can destroy value if it requires cash inputs in the early years of a project or enterprise that exceed the discounted value of the cash that those assets will generate in later years

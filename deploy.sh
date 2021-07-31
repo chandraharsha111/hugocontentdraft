@@ -9,11 +9,10 @@ printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 hugo -d ../chandraharsha111.github.io
 
-# Go To Public folder
-cd public
+# Deploy your public site
+cd ../chandraharsha111.github.io # Goes to your public site repo
+git add . # Adds changes
 
-# Add changes to git.
-git add .
 
 # Commit changes.
 msg="rebuilding site $(date)"
@@ -23,4 +22,17 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin main
+git push origin master
+printf "\033[0;32m Deployed the website ...\033[0m\n"
+
+cd ../hugocontentdraft
+git add . # Adds changes
+
+# Commit changes.
+msg="rebuilding site $(date)"
+if [ -n "$*" ]; then
+	msg="$*"
+fi
+
+git commit -m "$msg" # Makes your commit to hugocontent draft repo
+git push origin main # Pushes the code to GitHub

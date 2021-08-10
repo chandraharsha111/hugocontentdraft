@@ -383,10 +383,11 @@ The maven shade plugin supports combining all dependencies into a single jar. Wh
 
 
 # Java Heap Analysis: 
-
-
-
-
+* [Workshop](https://jvmperf.net/docs/jmc/memory/)
+* [GC easy](https://gceasy.io/)
+* [Java Stack Heap](https://www.baeldung.com/java-stack-heap)
+* [dzone Java memory management ](https://dzone.com/articles/java-memory-management)
+* [Javatpoint heap](https://www.javatpoint.com/java-heap)
 
 # Java Logging best practices:
 

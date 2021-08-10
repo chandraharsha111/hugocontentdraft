@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Chandra Harsha Jupalli">
+    <meta name="description" content="Assembly Management: Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
+  WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+  JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Learnings"/>
+<meta name="twitter:description" content="Assembly Management: Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
+  WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+  JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension."/>
+
+    <meta property="og:title" content="Java Learnings" />
+<meta property="og:description" content="Assembly Management: Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
+  WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+  JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.chandraharsha111.com/posts/technical-learnings/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-09T19:50:54-05:00" />
+<meta property="article:modified_time" content="2021-08-09T19:50:54-05:00" />
+
+
+
+    <title>
+  Java Learnings · Chandra Harsha Jupalli
+</title>
+
+    
+      <link rel="canonical" href="https://www.chandraharsha111.com/posts/technical-learnings/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.7/css/fork-awesome.min.css" integrity="sha512-9QjPqX/aCNwEQDyMqqMluNOSsHxTwOJNO3d4m5aUeNbyOPm8RcBA5hCUhvGmKFtSmQYGajqPopGtD60FWiWUwg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/12.0.4/2/twemoji.min.js" integrity="sha512-panBjUGuKarjg0qxHggQULmRf9jB/YVCy238hmzBWUuLeOuwMSuJgJcUv3T+rwXUBZ9zeUvc49ZcCRH+EO0H8g==" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.82.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Chandra Harsha Jupalli
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Java Learnings</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-08-09T19:50:54-05:00'>
+                August 9, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              19-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="assembly-management">Assembly Management:</h2>
+<p>Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.</p>
+<ul>
+<li>
+<p>WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.</p>
+</li>
+<li>
+<p>JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.</p>
+</li>
+<li>
+<p>EAR: A Enterprise Application Archive. These types of assemblies are used with Java EE applications</p>
+</li>
+</ul>
+<h3 id="dependency-analysis">Dependency Analysis:</h3>
+<p>Many libraries that an assembly will manage are implementations of APIs. For example, slf4j is a widely-used logging API, but requires an implementation at runtime for the logging events to be output. Not including an implementation for some APIs may result in failures at runtime. These may manifest as NoClassDefFoundError or AbstractMethodError, but will often be a subtype of LinkageError</p>
+<h2 id="dependency-resolution">Dependency Resolution</h2>
+<p>To determine the dependencies of your project, Maven will examine the pom, then query the configured remote repositories for all of your direct dependencies, and include their direct dependencies as dependencies of your project. It then repeats this process each time a new dependency is encountered until
+all dependencies have been discovered.</p>
+<p>If multiple versions of a transitive dependency are found, Maven will use the <a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Transitive_Dependencies">nearest definition</a>
+(i.e. selecting the shallowest instance of that dependency in the dependency tree). So if project <code>A</code> has the following dependency chains <code>A -&gt; B -&gt; C -&gt; D 2.0</code>
+and <code>A -&gt; E -&gt; D 1.0</code>, maven will resolve to version 1.0 of dependency D since there is shorter path version 1.0 of dependency D.</p>
+<h3 id="dependency-scopes">Dependency Scopes</h3>
+<p>Not all of the declared dependencies will be pulled in transitively, the <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope">scope</a>
+of the dependency determines if and how it is pulled in. Only <code>compile</code> or <code>runtime</code> dependencies are included transitively in the final assembly.</p>
+<h3 id="using-the-jar-command-to-examine-dependencies">Using the jar command to examine dependencies</h3>
+<p>The simplest way to examine the dependencies of you war is to use the <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jar.html">jar command</a> to list or extract the contents of the war</p>
+<p>Try the following command:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jar -tvf target/example-war-1.0-SNAPSHOT.war
+</code></pre></div><h3 id="using-the-dependency-plugin">Using the dependency plugin</h3>
+<p>The <a href="http://maven.apache.org/plugins/maven-dependency-plugin/">dependency plugin</a> is a maven supported plugin that provides several helpful goals for inspecting your dependencies</p>
+<h4 id="dependency-tree">Dependency Tree</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn dependency:tree
+mvn dependency:tree -Dverbose -Dincludes=commons-io
+</code></pre></div><h4 id="graph">Graph</h4>
+<p>You can get a similar representation from the dependency plugin, by generating a visualization of the graph. This
+can be accomplished by using the <a href="https://ferstl.github.io/depgraph-maven-plugin/">depgraph-maven-plugin</a>. This
+plugin will generate a Graphviz (.dot) file, which you can then render into an image.</p>
+<h2 id="dependency-management">Dependency Management</h2>
+<h3 id="dependency-analyze">Dependency Analyze</h3>
+<p>The dependency analyze command (<code>mvn dependency:analyze</code>) looks at your projects imports and reports any dependencies that should be inlcuded in your pom and are not, or that are listed in the pom but do not need to be.</p>
+<p>One caveat to the analyze report, because it is examing imports it may have false positives in the unused but declared section for dependencies which are injected or discovered at runtime.</p>
+<h1 id="dependency-conflicts">Dependency Conflicts</h1>
+<p>Once we&rsquo;re able to analyze our dependencies we need to be able to take action when a problem is encountered.</p>
+<p>It is possible for dependencies to conflict, either because a class definition exists in multiple dependencies
+or because the resolved version of a transitive dependency is incompatible with one or more other dependencies.</p>
+<p>A common cause of a class definition existing in multiple dependencies is if a project or artifact or
+group id is changed as part of a release. Examples of this are:</p>
+<ul>
+<li>guava vs google-collections</li>
+<li>spring vs spring-core</li>
+<li>hibernate vs hibernate-core</li>
+</ul>
+<p>Dependency conflicts can be difficult to identify because they often don&rsquo;t occur till runtime, and even then
+may only occur intermittently or depend on the runtime environment.</p>
+<h3 id="class-loaders">Class Loaders</h3>
+<p><a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html#jvms-5.3.2">Class loading</a> is a very complicated subject, however for the
+purposes of assemblies the things to keep in mind are:</p>
+<ul>
+<li>Multiple classloaders may exist and are applied in a hierarchy</li>
+<li>For assemblies the class loading behavior is generally controlled by the container which is running the assembly (ex. <a href="http://www.eclipse.org/jetty/">Jetty</a> for a web application assembly). As such, your assembly should be resilient to the class loading behavior changing if the container changes.</li>
+</ul>
+<p>For the <a href="http://www.eclipse.org/jetty/documentation/9.3.x/jetty-classloading.html">Jetty</a> container the example
+is running in, the defined behavior is that for non-system classes it will examine your war, looking in
+/WEB-INF/classes for a definition, and then check all of the included JARs in the /WEB-INF/lib directory. If
+muliple JARs contain the same class definition the loader will simply select the first one it finds.</p>
+<h3 id="dependency-management-1">Dependency Management</h3>
+<p>In the event of a version mismatch you can tell maven what version to resolve by specifying a <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management">dependency management</a>
+section in the pom.</p>
+<h3 id="excluding-dependencies">Excluding Dependencies</h3>
+<p>In the event multiple implementations exist it will be necessary to <a href="https://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html">exclude</a>
+one or more of the transitive dependencies. A depedency is excluded by adding an <code>exclusions</code> section to the dependency
+declaration in either the <code>dependencies</code> or <code>dependencyManagment</code> sections of the pom. During resolution maven will skip
+any excluded dependencies and will not evaluate any transitive dependencies of the exluded artifact. If your using
+a parent pom, exclusions in the parent pom will be honored in the child modules.</p>
+<p>Note that because exclusions are tied to a specific direct dependency, it may be necessary to exclude the same artifact multiple times if it is a transitive dependency of multiple direct dependencies. For this reason it is generally a good idea to use the enforcer plugin to ban any dependencies that you are excluding.</p>
+<p>The <a href="http://www.mojohaus.org/versions-maven-plugin/">versions plugin</a> can be used to identify candidates
+for upgrade</p>
+<h2 id="configuration">Configuration</h2>
+<p>Every application we build is configurable. When it comes to
+configuration, it is important that we evaluate what we should
+include in the assembly, and what we shouldn&rsquo;t.</p>
+<p>One way of describing configuration is following the definition
+provided by <a href="https://12factor.net/config">Twelve-Factor App</a>:</p>
+<blockquote>
+<p>An app’s config is everything that is likely to vary between deploys (staging, production, developer environments, etc). This includes:</p>
+</blockquote>
+<ul>
+<li>Resource handles to the database, Memcached, and other backing services</li>
+<li>Credentials to external services such as Amazon S3 or Twitter</li>
+<li>Per-deploy values such as the canonical hostname for the deploy</li>
+</ul>
+<p>Configuration can be quite broad, but if focus on what configuration
+we want to flex per deployment (in an environment) and what we don&rsquo;t
+want to flex per deployment, it will help us categorize what
+configuration should be included in the assembly.</p>
+<h3 id="configuration-sources">Configuration Sources</h3>
+<p>There are many different sources of configuration in our Java
+applications. Here is an exmaple of some of the common configuration types.</p>
+<h3 id="java-properties">Java Properties</h3>
+<p>You will find that a vast array of Java projects are configurable through
+Java properties. This simple key-value organization of configuration makes
+it easy to set configuration through either an argument to the JVM (<code>-D</code>)
+or by a <code>.properties</code> file. For the purpose of assemblies, the one of
+interest is the <code>.properties</code> files, as these are state files which
+can influence the configuration of the application, which may be a control
+that shouldn&rsquo;t be applied in the assembly, but rather at the point of deployment. You should always be weary of <code>.properties</code> files being
+included in your assembly, understand what it is configuring, and if
+it should really be included.</p>
+<h3 id="environment-entries">Environment Entries</h3>
+<p>Environment entries are key-value properties that can be communicated
+through the deployment descriptor (<code>web.xml</code>). As the name implies, the
+deployment descriptor has configuration which is of iterest at the point
+of deployment. You can assign default values. It is imperative that if you
+do have any defaults assigned, they are <strong>NOT</strong> environment specific
+examples.</p>
+<h3 id="logging">Logging</h3>
+<p>Many different logging implementations exist, all of which may have
+different logging files that control its configuration. Examples:</p>
+<ul>
+<li><a href="https://docs.oracle.com/cd/E19717-01/819-7753/gcblo/">JDK logger</a>: <code>logging.properties</code></li>
+<li><a href="https://logging.apache.org/log4j/1.2/faq.html">log4j-1.x</a>:
+<code>log4j.properties</code>, <code>log4j.xml</code></li>
+<li><a href="https://logging.apache.org/log4j/2.x/manual/configuration.html">log4j-2.x</a>:
+<code>log4j2.yaml</code>, <code>log4j2.json</code>, <code>log4j2.xml</code></li>
+<li><a href="http://logback.qos.ch/manual/configuration.html">logback</a>:
+<code>logback.xml</code></li>
+</ul>
+<p>:bulb: <em>Note: Many of the logging providers have multiple ways of being
+configured. The examples provided above was done to simply show that
+there are different files for these providers.</em></p>
+<h3 id="common-mistake">Common Mistake</h3>
+<p>A common mistake that is generally encountered, is that someone builds
+some new class in a project, and then they want to test it. When testing
+it, they realize they need some configuration, and put the configuration
+in <code>src/main/resources</code> vs. <code>src/test/resources</code>. As a result, that
+artifact assembles configuration into its end-state, when it many times
+it is intended for the consumer to configure.</p>
+<h2 id="logging-1">Logging</h2>
+<p>When logging dependencies are misconfigured it is likely that no events will be logged. When events can not be logged you lose insight into the state of your service.</p>
+<h3 id="options">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Implementation</th>
+<th>Bridge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html">Java Util Logging (JUL)</a></td>
+<td>JDK</td>
+<td>jul-to-slf4j</td>
+</tr>
+<tr>
+<td><a href="https://commons.apache.org/proper/commons-logging/">Apache Commons Logging (JCL)</a></td>
+<td>commons-logging</td>
+<td>jcl-over-slf4j</td>
+</tr>
+<tr>
+<td><a href="http://www.slf4j.org/">slf4j</a></td>
+<td>log4j<!-- raw HTML omitted -->logback</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://logging.apache.org/log4j/2.x/">log4j</a></td>
+<td>log4j</td>
+<td>log4j-over-slf4j</td>
+</tr>
+<tr>
+<td><a href="http://logback.qos.ch/">logback</a></td>
+<td>logback</td>
+<td>log4j-over-slf4j</td>
+</tr>
+<tr>
+<td><a href="http://wiki.apparch.cerner.corp/index.php/Instrument_SDK">Instrument SDK</a></td>
+<td>system-instrument</td>
+<td>system-instrument-logging-slf4j<!-- raw HTML omitted -->system-instrument-logging-jdk<!-- raw HTML omitted -->system-instrument-logging-log4j</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-1">Configuration</h3>
+<p>When many different logging implementations are used concurrently it becomes difficult to properly and confidently configure the log levels across all use cases. By managing all the dependencies to converge on a single implementation a single configuration can be supplied.</p>
+<h3 id="recommendation">Recommendation</h3>
+<p>It is recommended to use slf4j for the logging interface. The implementation should be decided based your deployment considerations.</p>
+<h3 id="bridge-examples">Bridge Examples</h3>
+<p>These examples demonstrate some items to consider when choosing a logging interface when the runtime implementation will be logback.</p>
+<ul>
+<li>slf4j &gt; logback</li>
+<li>jul &gt; jul-to-slf4j &gt; slf4j &gt; logback</li>
+<li>jcl &gt; jcl-over-slf4j &gt; slf4j &gt; logback</li>
+<li>log4j &gt; log4j-over-slf4j &gt; slf4j &gt; logback</li>
+</ul>
+<h3 id="diagnostics-context">Diagnostics Context</h3>
+<p><a href="http://www.slf4j.org/api/org/slf4j/MDC.html">slf4j</a> have the concept of a diagnostic context which can attach additonal meta data to a log event. The example below shows the correlation identifier <strong>b76f5bb7-327e-47c4-8795-008a6b11c476</strong> attached to the log events. This is achieved by setting the value into the diagnostic context and configuring the log format pattern to extract this value for each log event.</p>
+<h3 id="slf4j">slf4j</h3>
+<p>The two primary slf4j providers <a href="http://logback.qos.ch/manual/mdc.html">logback</a> and <a href="https://logging.apache.org/log4j/2.x/manual/thread-context.html">log4j</a> supply runtime implementations of the MDC(Map Diagnostic Context).</p>
+<h2 id="dependency-vulnerabilities">Dependency Vulnerabilities</h2>
+<p>In this section we will go into identifying security vulnerabilities that are tied to dependencies
+in your assembly.</p>
+<h3 id="common-vulnerabilities-and-exposures">Common Vulnerabilities and Exposures</h3>
+<p>One of the shared ways of publically identifying vulnerabilities with software dependencies is in
+the <a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)</a>. This database indexes
+vulnerabilities tied to software artifacts by using CVE (Common Vulnerabilities and Exposures)
+identifiers. Tooling and consumers that wish to correlate vulnerability data about software libaries
+generally reference feeds from the NVD, and then reference vulnerabilities by using the CVE
+identifiers.</p>
+<p>CVEs are tied to products, which have their own set of identifiers by using Common Platform
+Enumerations (CPEs). CPEs are used to identify products, which for the topic of Java assemblies, are
+Java artifact names. Here is an example of a CPE identifier (using the 2.3 format) for
+jackson-databind-2.9.9:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cpe:2.3:a:fasterxml:jackson-databind:2.9.9:*:*:*:*:*:*:*
+</code></pre></div><p>From this scheme, you can recognize common Maven identifiers (groupId: <code>fasterxml</code>, artifactId:
+<code>jackson-databind</code>, and <code>version</code>: <code>2.9.9</code>).</p>
+<h3 id="owasp-dependency-check">OWASP Dependency Check</h3>
+<p>As an assembly owner, we want to utilize tooling that can do this type of assessment of Java
+dependencies to CVE information. Luckily, there is an open-source project that does that for you! The OWASP Dependency Check project has a <a href="https://jeremylong.github.io/DependencyCheck/dependency-check-maven/">Maven plugin</a> and CLI that can help on doing assessments of your projects.</p>
+<h3 id="cli">CLI</h3>
+<p>You can install the CLI locally and run a scan of the example service with the following steps. This approach may be desirable as you can quickly assess existing assemblies without necessarily changing their Maven plugins:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># Download the OWASP Dependency Check CLI install</span>
+wget -O owasp-cli.jar https://dl.bintray.com/jeremy-long/owasp/dependency-check-4.0.2-release.zip
+unzip owasp-cli.jar
+</code></pre></div><h3 id="maven-dependency-plugin">Maven Dependency Plugin</h3>
+<p>You can then include the Maven plugin in your builds to fail builds when CVEs with a CVSS score that is too high. In a later section, we will highlight how we leverage this in our build as part of leveraging maven-base-pom.</p>
+<h3 id="automating-your-dependency-updates">Automating your dependency updates</h3>
+<p>As part of managing your dependencies in your assembly, a common goal is just keeping your dependencies up-to-date. With te case of security vunlerabilities, you generally are in a better position when you are up-to-date on your Java dependencies as you have included more fixes and you have less older versions which have had time to identify CVEs. To automate this task you can:</p>
+<ul>
+<li>Leverage the Maven <a href="https://www.mojohaus.org/versions-maven-plugin/">Versions plugin</a> to update your dependencies on a routine schedule (ex. every Monday morning)</li>
+<li>Create a pull request to your project with the changes proposed</li>
+<li>Allow your normal CI flow to validate the PR and to post the status</li>
+</ul>
+<p>Example of leveraging the the versions plugin to prep what changes are possible to be applied:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn org.codehaus.mojo:versions-maven-plugin:2.7:display-dependency-updates -N -U -l candidates.txt
+</code></pre></div><h2 id="versioning">Versioning</h2>
+<p>It&rsquo;s important to version both your assembly and any reusuable components that you own in a
+way that is consistent and communicates their compatability with existing versions.</p>
+<p>The accepted industry standard is known as <a href="http://semver.org/">semantic versioning</a>
+and expects version numbers be generally be in the form of <code>MAJOR.MINOR.PATCH</code></p>
+<p>A core tenant of semver is that once a versioned artifact is released it
+must not be modified. This has been communicated as <em>immutable artifacts</em>, which
+means once an artifact is released into the wild, it cannot ever change for that version.
+For more information on this topic, and why you should never release over an existing
+version, see: <a href="https://connect.ucern.com/thread/2199121">[RFC] Artifact immutability in release repositories</a>.</p>
+<h3 id="patch">PATCH</h3>
+<p>The patch version is incremented when there is a bug fix which does not impact any of
+the public APIs.  It should not require changes on behalf of the consumer.  It should
+be passive and safe to use without any unexpected results.</p>
+<h3 id="minor">MINOR</h3>
+<p>The minor version should be incremented when there is a <strong>passive</strong> or backwards compatible
+change made:</p>
+<ul>
+<li>Adding a new method or new API</li>
+<li>Adding a new required dependency that didn&rsquo;t exist before</li>
+<li>Deprecating old methods/classes</li>
+</ul>
+<h3 id="major">MAJOR</h3>
+<p>The major version should be incremented whenever there is a <strong>non-passive</strong> or potentially
+breaking change to an API, some examples of changes which necessitate a major version bump:</p>
+<ul>
+<li>Adding a method to a interface public interface (if no default implementation is provided)</li>
+<li>Removing, moving or renaming a method or class.
+<ul>
+<li>:boom: WARNING: <em>&ldquo;Public APIs, like diamonds, are forever&rdquo;</em>. -Joshua Bloch</li>
+</ul>
+</li>
+<li>Taking a new major version of a dependency</li>
+<li>Bumping a required technology minimum (e.g. compiling with a newer Java version)</li>
+<li>Major functionality changes that would require a consumer to change their code to correctly use the project.</li>
+</ul>
+<p>Generally it is better to over report the compatability risk of a new version than to
+under report.  <em>Focus on the user</em>.</p>
+<h3 id="qualifier">QUALIFIER</h3>
+<p>Releases tagged with a qualified version (e.g. 3.0.0-alpha, 1.0.0-RC2, 2.0.0-TP23, 1.0.0-jdk5) should be treated with caution.
+Only use them when you have a specific reason for doing so.
+Particularly in production settings, it can be confusing.  Tooling that has to sort/analyze based on versions can
+break with qualifiers.  Please, avoid perpetual alpha/beta versions.</p>
+<h3 id="0yz-versions">0.y.z VERSIONS</h3>
+<p>There is an exception for projects still in version 0.y.z.  Many <strong>non-passive</strong> changes can and do occur in this range
+at every release increment.  That being said, once your software is being used in production, it should probably be 1.0.0.</p>
+<h3 id="xy-versions">x.y VERSIONS</h3>
+<p>Many projects omit the third PATCH version.  It is preferred to include the PATCH version in all cases.  Release with version 1.0.0 instead of 1.0.</p>
+<h3 id="troubleshooting-tips">Troubleshooting tips:</h3>
+<p>Many times it is helpful to evaluate the classes being loaded, and what artifact they are originating from. To do this, you can utilize the the -verbose:class:</p>
+<p>To view the contents of the example project, you can do the following:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># -t: list table of contents for archive </span>
+<span style="color:#007f7f"># -f: specify archive file name</span>
+jar tf target/example-war-1.0-SNAPSHOT.war
+</code></pre></div><h3 id="maven-shade-plugin">maven-shade-plugin</h3>
+<p>The maven shade plugin supports combining all dependencies into a single jar. When duplicate classes are discovered only one can survive, the highlander version of the class may not include all the methods required.</p>
+<h1 id="java-basics-java8-jav16-features">Java Basics: (Java8-Jav16 Features)</h1>
+<p><a href="https://medium.com/swlh/from-java-8-to-java-15-in-ten-minutes-f42d422a581e">Java8-Java15 blog</a>
+<a href="https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features">Java Features and versions</a></p>
+<h1 id="maven">Maven:</h1>
+<p><a href="https://www.baeldung.com/maven">Basics</a>
+<a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope">Dependency Scope</a>
+<a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-management">Dependency Management</a>
+<a href="http://maven.apache.org/plugins/index.html">Plugins</a></p>
+<h1 id="java-heap-analysis">Java Heap Analysis:</h1>
+<h1 id="java-logging-best-practices">Java Logging best practices:</h1>
+<h3 id="log-levels">Log levels</h3>
+<p>Different logging abstractions have slightly different definitions
+of log levels, and their intention.</p>
+<ul>
+<li><strong>Tracing</strong>: The tracing facility is designed for developers and those who provide development support. Traces are usually fine-grained messages indicating flows of control through algorithms, but a tracing facility is always disabled by default in production deployments. Tracing should yield the greatest benefit during development with diminishing returns as the software nears production. This is not to preclude the use of tracers in production deployments, as they prove useful when engineers must get involved with issue investigation and isolation.</li>
+<li><strong>Logging</strong>: The logging facility is designed for those who administer systems. Such a person is not to be confused with a sophisticated developer, which is too often the case. Logging is perhaps the most visible indicator of the absence of manageability requirements during software design, because most messages are not useful to those for which they are intended to serve. To no surprise, past observations have shown that the majority of log messages actually serve the developer, even though the system administrator is the most deserving of crucial information. In order to change behavior, developers will notice that the logging facility requires a resource key, which not only deters ad hoc logging (which is better served through the tracing facility) but also establishes the foundation for the localization of messages.</li>
+<li><strong>Error Reporting</strong> : The error reporting facility is similar to the logging facility, but is designed to report exceptions. Developers will notice that the traditional level qualifier associated with popular logging systems is not present in this specification. This was an intentional design decision, rooted in the fact that developers are often not equipped to determine the severity of events without some context. This led to the first-class distinction between logging and error reporting.</li>
+</ul>
+<h4 id="slf4j-abstraction">SLF4J abstraction</h4>
+<p>We will learn more about <a href="https://www.slf4j.org/">this abstraction</a> in an upcoming section, as this is the most
+popular logging abstraction. However, it doesn&rsquo;t contain as much documentation or guidance on
+its levels, as it defers to the logging implementation&rsquo;s guidance for the levels that it maps to.</p>
+<h4 id="commons-logging-abstraction">commons-logging abstraction</h4>
+<p><a href="http://commons.apache.org/proper/commons-logging/guide.html#Message%20Priorities/Levels">commons-logging</a> has some guidance on log levels, as it is trying to accomodate
+many different implementations.</p>
+<ul>
+<li><strong>Fatal</strong> - Severe errors that cause premature termination. Expect these to be immediately visible on a status console. See also Internationalization.</li>
+<li><strong>Error</strong> - Other runtime errors or unexpected conditions. Expect these to be immediately visible on a status console. See also Internationalization.</li>
+<li><strong>Warn</strong> - Use of deprecated APIs, poor use of API, &lsquo;almost&rsquo; errors, other runtime situations that are undesirable or unexpected, but not necessarily &ldquo;wrong&rdquo;. Expect these to be immediately visible on a status console. See also Internationalization.</li>
+<li><strong>Info</strong> - Interesting runtime events (startup/shutdown). Expect these to be immediately visible on a console, so be conservative and keep to a minimum. See also Internationalization.</li>
+<li><strong>Debug</strong> - detailed information on the flow through the system. Expect these to be written to logs only.</li>
+<li><strong>Trace</strong> - more detailed information. Expect these to be written to logs only.</li>
+</ul>
+<p>Another note of guidance from commons-logging:</p>
+<blockquote>
+<p>When Info Level Instead of Debug?</p>
+<p>You want to have exception/problem information available for first-pass problem determination in a production level enterprise application without turning on debug as a default log level. There is simply too much information in debug to be appropriate for day-to-day operations.</p>
+</blockquote>
+<h4 id="log4j-implementation">Log4j implementation</h4>
+<p><a href="https://logging.apache.org/log4j/2.x/">Log4j</a> is a logging implementation rather than abstraction, but a very common one. Here are some of the levels that
+are utilized, with <a href="https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html">short guidance</a> on the types:</p>
+<ul>
+<li>TRACE: A fine-grained debug message, typically capturing the flow through the application.</li>
+<li>DEBUG: A general debugging event.</li>
+<li>INFO: An event for informational purposes.</li>
+<li>WARN: An event that might possibly lead to an error.</li>
+<li>FATAL: A severe error that will prevent the application from continuing.</li>
+<li>ERROR: An error in the application, possibly recoverable.</li>
+</ul>
+<h2 id="slf4j-1">slf4j</h2>
+<p>It is recommended to use slf4j for the logging interface.
+The two primary <code>slf4j</code> providers <a href="http://logback.qos.ch/manual/mdc.html">logback</a> and <a href="https://logging.apache.org/log4j/2.x/manual/thread-context.html">log4j</a> supply runtime implementations of the MDC interface.</p>
+<h2 id="be-aware-of-log-level-differences-with-implementations">Be aware of log level differences with implementations</h2>
+<p>Since your logging configuration is specific to the logging implementation, you need to be
+aware of the specifics of the implementation. Many different logging implementations exist,
+all of which may have different logging files that control its configuration. Examples:</p>
+<ul>
+<li><a href="https://docs.oracle.com/cd/E19717-01/819-7753/gcblo/">JDK logger</a>: <code>logging.properties</code></li>
+<li><a href="https://logging.apache.org/log4j/1.2/faq.html">log4j-1.x</a>:
+<code>log4j.properties</code>, <code>log4j.xml</code></li>
+<li><a href="https://logging.apache.org/log4j/2.x/manual/configuration.html">log4j-2.x</a>:
+<code>log4j2.yaml</code>, <code>log4j2.json</code>, <code>log4j2.xml</code></li>
+<li><a href="http://logback.qos.ch/manual/configuration.html">logback</a>:
+<code>logback.xml</code></li>
+</ul>
+<p>:bulb: <em>Note: Many of the logging providers have multiple ways of being
+configured. The examples provided above was done to simply show that
+there are different files for these providers.</em></p>
+<h3 id="watch-out-for">Watch out for</h3>
+<h2 id="avoid-the-java-system-library">Avoid the Java System Library</h2>
+<p>You should not write directly to System.out or System.err, or rely on methods that do, such as
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#printStackTrace--">Throwable.printStackTrace()</a>.
+Relying directly on the System library to write to the console can result in critical
+information or context being lost. Even if a process redirects standard out and error to a file,
+information may be lost if that link is broken (e.g Log Rotation).</p>
+<p>If you use a logging abstraction, then your runtime can choose an implementation that directs logs
+appropriately based on their needs.</p>
+<h2 id="exceptions-should-be-logged-or-propagated">Exceptions should be logged or propagated</h2>
+<p>When an exception occurs it is important to capture the full context of the exception, including the
+stack trace. If the exception is going to be re-thrown be sure to include the original exception as
+the cause of the new exception. If the exception is not being propogated then be sure that the details
+of the exception is included in the log message. <strong>NEVER</strong> just catch and eat an exception or just log
+a generic statement such as &ldquo;exception occurred&rdquo;.</p>
+<h2 id="not-using-static-code-analysis">Not using Static Code Analysis</h2>
+<p>Both <a href="http://pmd.sourceforge.net/pmd-4.3.0/rules/logging-java.html">PMD</a> and <a href="http://findbugs.sourceforge.net/">findbugs</a>
+provide rulesets which can catch common logging bugs. Using these static analysis tools
+can help ensure that you are utilizing the logger framework effectively and prevent incorrectly
+formatted messages from appearing in your log stream.</p>
+<p>We will cover more of this in the next section: <a href="../007-testing/README.md">Testing</a>, on how to use these tools
+and the details of what they can provide.</p>
+<h2 id="logs-causing-errors">Logs causing errors</h2>
+<p>When constructing log messages exercise care that the log message itself does not cause an error.
+Errors in logging can be particulary problematic because they may not be exposed until long after
+it&rsquo;s written, e.g. we turn the log level up to troubleshoot an issue and expose an NPE on a
+request that may have completed successfully before.</p>
+<h2 id="logging-in-loops-or-collections">Logging in loops or collections</h2>
+<p>When dealing with collections or loops we need to be careful that we don&rsquo;t create noise in the logs
+by writting very large messages or a mass of nearly identical messages. Generally we should avoid
+including collections in a log message if we aren&rsquo;t confident it will contain a reasonable number
+of items and when working with loops we should try to only log events that we would not expect to
+occur frequently.</p>
+<h2 id="over-reliance-on-the-tostring-method">Over reliance on the toString method</h2>
+<p>When including an object in a log message we must be sure that the final log will be meaningful.
+Care should be exercised when relying on the toString method of an object to add context to
+the the log event. There are two potential pitfalls in doing so:</p>
+<ol>
+<li>All objects inherit the base toString implementation, so there is no guarantee that
+the textual representation will be helpful or meaningful. This is especially true when dealing
+with interfaces where you may not know the actual implementation(s) that will be
+encountered at runtime.</li>
+<li>Even if you are confident that the object provides a well formatted toString implementation you may
+still wish to avoid relying on it. If the object is very large or contains PHI then including
+the entire object in the log messages exposes your consumers to extraneous or potentially
+sensitive information.</li>
+</ol>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Every thing should be made as simple as possible, but not simpler - Albert Einstein</p>
+      
+      
+        ©
+        
+          2020 -
+        
+        2021
+         Chandra Harsha Jupalli 
+      
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </body>
+
+</html>

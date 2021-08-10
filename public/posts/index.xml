@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Chandra Harsha Jupalli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Feb 2021 12:59:41 -0600</lastBuildDate><atom:link href="https://www.chandraharsha111.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Aug 2021 19:50:54 -0500</lastBuildDate><atom:link href="https://www.chandraharsha111.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Learnings</title>
+      <link>https://www.chandraharsha111.com/posts/technical-learnings/</link>
+      <pubDate>Mon, 09 Aug 2021 19:50:54 -0500</pubDate>
+      
+      <guid>https://www.chandraharsha111.com/posts/technical-learnings/</guid>
+      <description>Assembly Management: Assembly: An &amp;ldquo;assembly&amp;rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
+  WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+  JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.</description>
+    </item>
+    
     <item>
       <title>Berkshire Annual reports summary</title>
       <link>https://www.chandraharsha111.com/posts/berkshire-annual-reports/</link>

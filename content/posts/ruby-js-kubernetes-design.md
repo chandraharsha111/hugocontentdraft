@@ -22,15 +22,15 @@ series = []
 
 ## Kubernetes, docker, Spinakker, Helm: 
  
-[Docker](https://docs.docker.com/get-started/)
-[Kubernetes](https://kubernetes.io/docs/home/)
-[Kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
-[MiniKube](https://v1-18.docs.kubernetes.io/docs/tasks/tools/install-minikube/)
-[Spinakker](https://spinnaker.io/docs/guides/tutorials/videos/)
-[HelmCharts](https://helm.sh/)
+* [Docker](https://docs.docker.com/get-started/)
+* [Kubernetes](https://kubernetes.io/docs/home/)
+* [Kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
+* [MiniKube](https://v1-18.docs.kubernetes.io/docs/tasks/tools/install-minikube/)
+* [Spinakker](https://spinnaker.io/docs/guides/tutorials/videos/)
+* [HelmCharts](https://helm.sh/)
 
 # Ruby:
-[Ruby basics](https://www.youtube.com/watch?v=Dji9ALCgfpM)
-[Ruby tutorial](https://www.javatpoint.com/ruby-tutorial)
-[Ruby online org](https://www.learnrubyonline.org/en/Welcome)
-[Tutorials point](https://www.tutorialspoint.com/ruby/index.htm)
+* [Ruby basics](https://www.youtube.com/watch?v=Dji9ALCgfpM)
+* [Ruby tutorial](https://www.javatpoint.com/ruby-tutorial)
+* [Ruby online org](https://www.learnrubyonline.org/en/Welcome)
+* [Tutorials point](https://www.tutorialspoint.com/ruby/index.htm)

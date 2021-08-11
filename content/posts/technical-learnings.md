@@ -518,9 +518,3 @@ encountered at runtime.
 still wish to avoid relying on it. If the object is very large or contains PHI then including
 the entire object in the log messages exposes your consumers to extraneous or potentially
 sensitive information.
-
-
-
-
-
-

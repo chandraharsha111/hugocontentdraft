@@ -17,7 +17,7 @@ series = []
 * [Object Models](https://ecs.syr.edu/faculty/fawcett/handouts/webpages/BlogObjectModels.htm)
 * [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 * [Eloquent JS Book](https://eloquentjavascript.net/)
-* [Java Script running in a browser](https://ecs.syr.edu/faculty/fawcett/handouts/CSE775/Presentations/ JavaScriptDemos/JavaScriptInBrowser.pdf)
+* [JS in browser](https://ecs.syr.edu/faculty/fawcett/handouts/CSE775/Presentations/ JavaScriptDemos JavaScriptInBrowser.pdf)
 * [Intro to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
 ## Kubernetes, docker, Spinakker, Helm: 

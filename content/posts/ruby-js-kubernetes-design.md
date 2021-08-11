@@ -1,8 +1,8 @@
 +++ 
 draft = false
 date = 2021-08-10T19:50:00-05:00
-title = ""
-description = "Object Orineted design, Ruby, Kubernetes, JavaScript"
+title = "Object Orineted design, Ruby, Kubernetes, JavaScript"
+description = ""
 slug = ""
 authors = []
 tags = []

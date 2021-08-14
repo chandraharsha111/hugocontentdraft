@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2021-08-14T14:34:07-05:00
-title = "AWS,API Specification,Jenkins,OAUTH "
+title = "AWS,API Specification,Jenkins and OAUTH "
 description = ""
 slug = ""
 authors = []

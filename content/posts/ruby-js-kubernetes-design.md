@@ -28,6 +28,7 @@ series = []
 * [MiniKube](https://v1-18.docs.kubernetes.io/docs/tasks/tools/install-minikube/)
 * [Spinakker](https://spinnaker.io/docs/guides/tutorials/videos/)
 * [HelmCharts](https://helm.sh/)
+* [NewRelic](https://learn.newrelic.com/get-started-with-apm)
 
 # Ruby:
 * [Ruby basics](https://www.youtube.com/watch?v=Dji9ALCgfpM)

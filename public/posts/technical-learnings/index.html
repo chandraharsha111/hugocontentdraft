@@ -211,8 +211,7 @@ purposes of assemblies the things to keep in mind are:</p>
 <li>Multiple classloaders may exist and are applied in a hierarchy</li>
 <li>For assemblies the class loading behavior is generally controlled by the container which is running the assembly (ex. <a href="http://www.eclipse.org/jetty/">Jetty</a> for a web application assembly). As such, your assembly should be resilient to the class loading behavior changing if the container changes.</li>
 </ul>
-<p>For the <a href="http://www.eclipse.org/jetty/documentation/9.3.x/jetty-classloading.html">Jetty</a> container the example
-is running in, the defined behavior is that for non-system classes it will examine your war, looking in
+<p>For the <a href="http://www.eclipse.org/jetty/documentation/9.3.x/jetty-classloading.html">Jetty</a> container, the defined behavior is that for non-system classes it will examine your war, looking in
 /WEB-INF/classes for a definition, and then check all of the included JARs in the /WEB-INF/lib directory. If
 muliple JARs contain the same class definition the loader will simply select the first one it finds.</p>
 <h3 id="dependency-management-1">Dependency Management</h3>
@@ -277,9 +276,9 @@ different logging files that control its configuration. Examples:</p>
 <li><a href="http://logback.qos.ch/manual/configuration.html">logback</a>:
 <code>logback.xml</code></li>
 </ul>
-<p>:bulb: <em>Note: Many of the logging providers have multiple ways of being
+<p><code>Note:</code> Many of the logging providers have multiple ways of being
 configured. The examples provided above was done to simply show that
-there are different files for these providers.</em></p>
+there are different files for these providers._</p>
 <h3 id="common-mistake">Common Mistake</h3>
 <p>A common mistake that is generally encountered, is that someone builds
 some new class in a project, and then they want to test it. When testing
@@ -440,13 +439,17 @@ jar tf target/example-war-1.0-SNAPSHOT.war
 </code></pre></div><h3 id="maven-shade-plugin">maven-shade-plugin</h3>
 <p>The maven shade plugin supports combining all dependencies into a single jar. When duplicate classes are discovered only one can survive, the highlander version of the class may not include all the methods required.</p>
 <h1 id="java-basics-java8-jav16-features">Java Basics: (Java8-Jav16 Features)</h1>
-<p><a href="https://medium.com/swlh/from-java-8-to-java-15-in-ten-minutes-f42d422a581e">Java8-Java15 blog</a>
-<a href="https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features">Java Features and versions</a></p>
+<ul>
+<li><a href="https://medium.com/swlh/from-java-8-to-java-15-in-ten-minutes-f42d422a581e">Java8-Java15 blog</a></li>
+<li><a href="https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features">Java Features and versions</a></li>
+</ul>
 <h1 id="maven">Maven:</h1>
-<p><a href="https://www.baeldung.com/maven">Basics</a>
-<a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope">Dependency Scope</a>
-<a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-management">Dependency Management</a>
-<a href="http://maven.apache.org/plugins/index.html">Plugins</a></p>
+<ul>
+<li><a href="https://www.baeldung.com/maven">Basics</a></li>
+<li><a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope">Dependency Scope</a></li>
+<li><a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-management">Dependency Management</a></li>
+<li><a href="http://maven.apache.org/plugins/index.html">Plugins</a></li>
+</ul>
 <h1 id="java-heap-analysis">Java Heap Analysis:</h1>
 <ul>
 <li><a href="https://jvmperf.net/docs/jmc/memory/">Workshop</a></li>
@@ -511,11 +514,11 @@ all of which may have different logging files that control its configuration. Ex
 <li><a href="http://logback.qos.ch/manual/configuration.html">logback</a>:
 <code>logback.xml</code></li>
 </ul>
-<p>:bulb: <em>Note: Many of the logging providers have multiple ways of being
+<p><code> _Note</code> Many of the logging providers have multiple ways of being
 configured. The examples provided above was done to simply show that
-there are different files for these providers.</em></p>
-<h3 id="watch-out-for">Watch out for</h3>
-<h2 id="avoid-the-java-system-library">Avoid the Java System Library</h2>
+there are different files for these providers._</p>
+<h2 id="tips">TIPS</h2>
+<h3 id="avoid-the-java-system-library">Avoid the Java System Library</h3>
 <p>You should not write directly to System.out or System.err, or rely on methods that do, such as
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#printStackTrace--">Throwable.printStackTrace()</a>.
 Relying directly on the System library to write to the console can result in critical
@@ -523,31 +526,31 @@ information or context being lost. Even if a process redirects standard out and 
 information may be lost if that link is broken (e.g Log Rotation).</p>
 <p>If you use a logging abstraction, then your runtime can choose an implementation that directs logs
 appropriately based on their needs.</p>
-<h2 id="exceptions-should-be-logged-or-propagated">Exceptions should be logged or propagated</h2>
+<h3 id="exceptions-should-be-logged-or-propagated">Exceptions should be logged or propagated</h3>
 <p>When an exception occurs it is important to capture the full context of the exception, including the
 stack trace. If the exception is going to be re-thrown be sure to include the original exception as
 the cause of the new exception. If the exception is not being propogated then be sure that the details
 of the exception is included in the log message. <strong>NEVER</strong> just catch and eat an exception or just log
 a generic statement such as &ldquo;exception occurred&rdquo;.</p>
-<h2 id="not-using-static-code-analysis">Not using Static Code Analysis</h2>
+<h3 id="not-using-static-code-analysis">Not using Static Code Analysis</h3>
 <p>Both <a href="http://pmd.sourceforge.net/pmd-4.3.0/rules/logging-java.html">PMD</a> and <a href="http://findbugs.sourceforge.net/">findbugs</a>
 provide rulesets which can catch common logging bugs. Using these static analysis tools
 can help ensure that you are utilizing the logger framework effectively and prevent incorrectly
 formatted messages from appearing in your log stream.</p>
 <p>We will cover more of this in the next section: <a href="../007-testing/README.md">Testing</a>, on how to use these tools
 and the details of what they can provide.</p>
-<h2 id="logs-causing-errors">Logs causing errors</h2>
+<h3 id="logs-causing-errors">Logs causing errors</h3>
 <p>When constructing log messages exercise care that the log message itself does not cause an error.
 Errors in logging can be particulary problematic because they may not be exposed until long after
 it&rsquo;s written, e.g. we turn the log level up to troubleshoot an issue and expose an NPE on a
 request that may have completed successfully before.</p>
-<h2 id="logging-in-loops-or-collections">Logging in loops or collections</h2>
+<h3 id="logging-in-loops-or-collections">Logging in loops or collections</h3>
 <p>When dealing with collections or loops we need to be careful that we don&rsquo;t create noise in the logs
 by writting very large messages or a mass of nearly identical messages. Generally we should avoid
 including collections in a log message if we aren&rsquo;t confident it will contain a reasonable number
 of items and when working with loops we should try to only log events that we would not expect to
 occur frequently.</p>
-<h2 id="over-reliance-on-the-tostring-method">Over reliance on the toString method</h2>
+<h3 id="over-reliance-on-the-tostring-method">Over reliance on the toString method</h3>
 <p>When including an object in a log message we must be sure that the final log will be meaningful.
 Care should be exercised when relying on the toString method of an object to add context to
 the the log event. There are two potential pitfalls in doing so:</p>

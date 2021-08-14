@@ -96,8 +96,7 @@ purposes of assemblies the things to keep in mind are:
 * Multiple classloaders may exist and are applied in a hierarchy
 * For assemblies the class loading behavior is generally controlled by the container which is running the assembly (ex. [Jetty](http://www.eclipse.org/jetty/) for a web application assembly). As such, your assembly should be resilient to the class loading behavior changing if the container changes.
 
-For the [Jetty](http://www.eclipse.org/jetty/documentation/9.3.x/jetty-classloading.html) container the example
-is running in, the defined behavior is that for non-system classes it will examine your war, looking in
+For the [Jetty](http://www.eclipse.org/jetty/documentation/9.3.x/jetty-classloading.html) container, the defined behavior is that for non-system classes it will examine your war, looking in
 /WEB-INF/classes for a definition, and then check all of the included JARs in the /WEB-INF/lib directory. If
 muliple JARs contain the same class definition the loader will simply select the first one it finds.
 
@@ -178,7 +177,7 @@ different logging files that control its configuration. Examples:
 * [logback](http://logback.qos.ch/manual/configuration.html): 
 `logback.xml`
 
-:bulb: _Note: Many of the logging providers have multiple ways of being
+`Note:` Many of the logging providers have multiple ways of being
 configured. The examples provided above was done to simply show that
 there are different files for these providers._
 
@@ -368,14 +367,14 @@ jar tf target/example-war-1.0-SNAPSHOT.war
 The maven shade plugin supports combining all dependencies into a single jar. When duplicate classes are discovered only one can survive, the highlander version of the class may not include all the methods required.
 
 # Java Basics: (Java8-Jav16 Features)
-[Java8-Java15 blog](https://medium.com/swlh/from-java-8-to-java-15-in-ten-minutes-f42d422a581e)
-[Java Features and versions](https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features)
+* [Java8-Java15 blog](https://medium.com/swlh/from-java-8-to-java-15-in-ten-minutes-f42d422a581e)
+* [Java Features and versions](https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features)
 
 # Maven: 
-[Basics](https://www.baeldung.com/maven) 
-[Dependency Scope](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope)
-[Dependency Management](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-management)
-[Plugins](http://maven.apache.org/plugins/index.html)
+* [Basics](https://www.baeldung.com/maven) 
+* [Dependency Scope](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope)
+* [Dependency Management](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-management)
+* [Plugins](http://maven.apache.org/plugins/index.html)
 
 # Java Heap Analysis: 
 * [Workshop](https://jvmperf.net/docs/jmc/memory/)
@@ -449,13 +448,13 @@ all of which may have different logging files that control its configuration. Ex
 * [logback](http://logback.qos.ch/manual/configuration.html): 
 `logback.xml`
 
-:bulb: _Note: Many of the logging providers have multiple ways of being
+` _Note` Many of the logging providers have multiple ways of being
 configured. The examples provided above was done to simply show that
 there are different files for these providers._
 
-### Watch out for
+## TIPS
 
-## Avoid the Java System Library
+### Avoid the Java System Library
 
 You should not write directly to System.out or System.err, or rely on methods that do, such as
 [Throwable.printStackTrace()](https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#printStackTrace--). 
@@ -466,7 +465,7 @@ information may be lost if that link is broken (e.g Log Rotation).
 If you use a logging abstraction, then your runtime can choose an implementation that directs logs
 appropriately based on their needs.
 
-## Exceptions should be logged or propagated
+### Exceptions should be logged or propagated
 
 When an exception occurs it is important to capture the full context of the exception, including the
 stack trace. If the exception is going to be re-thrown be sure to include the original exception as
@@ -474,7 +473,7 @@ the cause of the new exception. If the exception is not being propogated then be
 of the exception is included in the log message. **NEVER** just catch and eat an exception or just log
 a generic statement such as "exception occurred".
 
-## Not using Static Code Analysis
+### Not using Static Code Analysis
 
 Both [PMD](http://pmd.sourceforge.net/pmd-4.3.0/rules/logging-java.html) and [findbugs](http://findbugs.sourceforge.net/)
 provide rulesets which can catch common logging bugs. Using these static analysis tools
@@ -484,14 +483,14 @@ formatted messages from appearing in your log stream.
 We will cover more of this in the next section: [Testing](../007-testing/README.md), on how to use these tools
 and the details of what they can provide.
 
-## Logs causing errors
+### Logs causing errors
 
 When constructing log messages exercise care that the log message itself does not cause an error.
 Errors in logging can be particulary problematic because they may not be exposed until long after
 it's written, e.g. we turn the log level up to troubleshoot an issue and expose an NPE on a
 request that may have completed successfully before.
 
-## Logging in loops or collections
+### Logging in loops or collections
 
 When dealing with collections or loops we need to be careful that we don't create noise in the logs
 by writting very large messages or a mass of nearly identical messages. Generally we should avoid
@@ -499,7 +498,7 @@ including collections in a log message if we aren't confident it will contain a 
 of items and when working with loops we should try to only log events that we would not expect to
 occur frequently.
 
-## Over reliance on the toString method
+### Over reliance on the toString method
 
 When including an object in a log message we must be sure that the final log will be meaningful.
 Care should be exercised when relying on the toString method of an object to add context to

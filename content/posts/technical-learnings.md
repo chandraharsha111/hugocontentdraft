@@ -13,23 +13,22 @@ series = []
 
 ## Assembly Management: 
 
-Assembly: An "assembly" is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
+`Assembly`: An "assembly" is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
 
-* WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+* `WAR`: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
 
-* JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.
+* `JAR`: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.
 
-* EAR: A Enterprise Application Archive. These types of assemblies are used with Java EE applications
+* `EAR`: A Enterprise Application Archive. These types of assemblies are used with Java EE applications
 
 
 ### Dependency Analysis:
-Many libraries that an assembly will manage are implementations of APIs. For example, slf4j is a widely-used logging API, but requires an implementation at runtime for the logging events to be output. Not including an implementation for some APIs may result in failures at runtime. These may manifest as NoClassDefFoundError or AbstractMethodError, but will often be a subtype of LinkageError 
+Many libraries that an assembly will manage are implementations of APIs. For example, slf4j is a widely-used logging API, but requires an implementation at runtime for the logging events to be output. Not including an implementation for some APIs may result in failures at runtime. These may manifest as `NoClassDefFoundError` or `AbstractMethodError`, but will often be a subtype of `LinkageError`
 
 
 ## Dependency Resolution
 
-To determine the dependencies of your project, Maven will examine the pom, then query the configured remote repositories for all of your direct dependencies, and include their direct dependencies as dependencies of your project. It then repeats this process each time a new dependency is encountered until
-all dependencies have been discovered.
+To determine the dependencies of your project, Maven will examine the pom, then query the configured remote repositories for all of your direct dependencies, and include their direct dependencies as dependencies of your project. It then repeats this process each time a new dependency is encountered until all dependencies have been discovered.
 
 If multiple versions of a transitive dependency are found, Maven will use the [nearest definition](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Transitive_Dependencies)
 (i.e. selecting the shallowest instance of that dependency in the dependency tree). So if project `A` has the following dependency chains `A -> B -> C -> D 2.0`
@@ -73,7 +72,7 @@ The dependency analyze command (`mvn dependency:analyze`) looks at your projects
 
 One caveat to the analyze report, because it is examing imports it may have false positives in the unused but declared section for dependencies which are injected or discovered at runtime.
 
-# Dependency Conflicts
+### Dependency Conflicts
 
 Once we're able to analyze our dependencies we need to be able to take action when a problem is encountered.
 
@@ -119,7 +118,7 @@ Note that because exclusions are tied to a specific direct dependency, it may be
 The [versions plugin](http://www.mojohaus.org/versions-maven-plugin/) can be used to identify candidates
 for upgrade
 
-## Configuration
+### Configuration
 
 Every application we build is configurable. When it comes to
 configuration, it is important that we evaluate what we should
@@ -368,19 +367,15 @@ jar tf target/example-war-1.0-SNAPSHOT.war
 ### maven-shade-plugin
 The maven shade plugin supports combining all dependencies into a single jar. When duplicate classes are discovered only one can survive, the highlander version of the class may not include all the methods required.
 
-
 # Java Basics: (Java8-Jav16 Features)
 [Java8-Java15 blog](https://medium.com/swlh/from-java-8-to-java-15-in-ten-minutes-f42d422a581e)
 [Java Features and versions](https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features)
-
-
 
 # Maven: 
 [Basics](https://www.baeldung.com/maven) 
 [Dependency Scope](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope)
 [Dependency Management](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-management)
 [Plugins](http://maven.apache.org/plugins/index.html)
-
 
 # Java Heap Analysis: 
 * [Workshop](https://jvmperf.net/docs/jmc/memory/)

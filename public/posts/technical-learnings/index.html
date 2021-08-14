@@ -152,23 +152,22 @@
       <div>
         
         <h2 id="assembly-management">Assembly Management:</h2>
-<p>Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.</p>
+<p><code>Assembly</code>: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.</p>
 <ul>
 <li>
-<p>WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.</p>
+<p><code>WAR</code>: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.</p>
 </li>
 <li>
-<p>JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.</p>
+<p><code>JAR</code>: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.</p>
 </li>
 <li>
-<p>EAR: A Enterprise Application Archive. These types of assemblies are used with Java EE applications</p>
+<p><code>EAR</code>: A Enterprise Application Archive. These types of assemblies are used with Java EE applications</p>
 </li>
 </ul>
 <h3 id="dependency-analysis">Dependency Analysis:</h3>
-<p>Many libraries that an assembly will manage are implementations of APIs. For example, slf4j is a widely-used logging API, but requires an implementation at runtime for the logging events to be output. Not including an implementation for some APIs may result in failures at runtime. These may manifest as NoClassDefFoundError or AbstractMethodError, but will often be a subtype of LinkageError</p>
+<p>Many libraries that an assembly will manage are implementations of APIs. For example, slf4j is a widely-used logging API, but requires an implementation at runtime for the logging events to be output. Not including an implementation for some APIs may result in failures at runtime. These may manifest as <code>NoClassDefFoundError</code> or <code>AbstractMethodError</code>, but will often be a subtype of <code>LinkageError</code></p>
 <h2 id="dependency-resolution">Dependency Resolution</h2>
-<p>To determine the dependencies of your project, Maven will examine the pom, then query the configured remote repositories for all of your direct dependencies, and include their direct dependencies as dependencies of your project. It then repeats this process each time a new dependency is encountered until
-all dependencies have been discovered.</p>
+<p>To determine the dependencies of your project, Maven will examine the pom, then query the configured remote repositories for all of your direct dependencies, and include their direct dependencies as dependencies of your project. It then repeats this process each time a new dependency is encountered until all dependencies have been discovered.</p>
 <p>If multiple versions of a transitive dependency are found, Maven will use the <a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Transitive_Dependencies">nearest definition</a>
 (i.e. selecting the shallowest instance of that dependency in the dependency tree). So if project <code>A</code> has the following dependency chains <code>A -&gt; B -&gt; C -&gt; D 2.0</code>
 and <code>A -&gt; E -&gt; D 1.0</code>, maven will resolve to version 1.0 of dependency D since there is shorter path version 1.0 of dependency D.</p>
@@ -192,7 +191,7 @@ plugin will generate a Graphviz (.dot) file, which you can then render into an i
 <h3 id="dependency-analyze">Dependency Analyze</h3>
 <p>The dependency analyze command (<code>mvn dependency:analyze</code>) looks at your projects imports and reports any dependencies that should be inlcuded in your pom and are not, or that are listed in the pom but do not need to be.</p>
 <p>One caveat to the analyze report, because it is examing imports it may have false positives in the unused but declared section for dependencies which are injected or discovered at runtime.</p>
-<h1 id="dependency-conflicts">Dependency Conflicts</h1>
+<h3 id="dependency-conflicts">Dependency Conflicts</h3>
 <p>Once we&rsquo;re able to analyze our dependencies we need to be able to take action when a problem is encountered.</p>
 <p>It is possible for dependencies to conflict, either because a class definition exists in multiple dependencies
 or because the resolved version of a transitive dependency is incompatible with one or more other dependencies.</p>
@@ -228,7 +227,7 @@ a parent pom, exclusions in the parent pom will be honored in the child modules.
 <p>Note that because exclusions are tied to a specific direct dependency, it may be necessary to exclude the same artifact multiple times if it is a transitive dependency of multiple direct dependencies. For this reason it is generally a good idea to use the enforcer plugin to ban any dependencies that you are excluding.</p>
 <p>The <a href="http://www.mojohaus.org/versions-maven-plugin/">versions plugin</a> can be used to identify candidates
 for upgrade</p>
-<h2 id="configuration">Configuration</h2>
+<h3 id="configuration">Configuration</h3>
 <p>Every application we build is configurable. When it comes to
 configuration, it is important that we evaluate what we should
 include in the assembly, and what we shouldn&rsquo;t.</p>

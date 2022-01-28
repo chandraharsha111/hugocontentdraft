@@ -23,7 +23,7 @@ Investing can simply be put as a process in which upon *thorough* analysis, prom
 
 **Commodities**: *Gold, Silver, Oil, Cotton*
 
-   This category relates to items that don't produce anything but we expect that someone will pay us more later on. One of such  examples is Gold. If we consider all of the Gold in the world, its about 7.5 trillion. That accounts to owning total farmland in the United States(2.7 trillion) + owning couple of most valuable companies like Apple(2 Trillion each) + 1 trillion of walking money or cash in ones pocket. I would choose productive assets over unproductive assets any day.
+   This category relates to items that don't produce anything but we expect that someone will pay us more later on. One of such  examples is Gold. If we consider all of the Gold in the world, its about 7.5 trillion. That accounts to owning total farmland in the United States(2.7 trillion) + 14 percent of all the stocks in the USA  + 1 trillion of walking money or cash in ones pocket. Choose productive assets over unproductive assets are inevitably beneficial.
    
    Gold may be a decent inflation hedge, however you could be speculating(hoping that other people will more tomorrow for the asset we hold). [Keynes](https://en.wikipedia.org/wiki/John_Maynard_Keynes) described it as "picking what you think that other people would pick in a beauty contest rather than picking the most beautiful women among the group". 
 
@@ -57,8 +57,8 @@ Accounting is the language of business, so I expect active investors to be well 
 
 **Passive Investing**: 
 
-For someone that is not having significant amount of time to do thorough analysis of a businesses, Index investing provides the simplicity these investors need.  Moreover, it is self cleansing, by which I mean companies can be added and removed from the index based on business performance at a very low fee. Looking at history, I feel this is what most people should focus on and just move on with things that they are interested about in life. 
+For someone that is not having significant amount of time, Index investing provides the simplicity these investors need.  Moreover, it is self cleansing, by which I mean companies can be added and removed from the index based on business performance at a very low fee. Looking at history, I feel this is what most people should focus on and just move on with things that they are interested about in life. 
 
-[Index Investing](https://www.thesimpledollar.com/investing/what-is-index-investing-and-why-does-it-work/) - Why Indexing works
+[Index Investing](https://www.investopedia.com/terms/i/index-investing.asp)
 
 I believe investing is too important for most people to ignore since it has the power to change peoples lives.

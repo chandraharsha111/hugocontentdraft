@@ -70,7 +70,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/12.0.4/2/twemoji.min.js" integrity="sha512-panBjUGuKarjg0qxHggQULmRf9jB/YVCy238hmzBWUuLeOuwMSuJgJcUv3T+rwXUBZ9zeUvc49ZcCRH+EO0H8g==" crossorigin="anonymous"></script>
     
 
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.92.1" />
   </head>
 
   
@@ -177,11 +177,11 @@ of the dependency determines if and how it is pulled in. Only <code>compile</cod
 <h3 id="using-the-jar-command-to-examine-dependencies">Using the jar command to examine dependencies</h3>
 <p>The simplest way to examine the dependencies of you war is to use the <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jar.html">jar command</a> to list or extract the contents of the war</p>
 <p>Try the following command:</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jar -tvf target/example-war-1.0-SNAPSHOT.war
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jar -tvf target/example-war-1.0-SNAPSHOT.war
 </code></pre></div><h3 id="using-the-dependency-plugin">Using the dependency plugin</h3>
 <p>The <a href="http://maven.apache.org/plugins/maven-dependency-plugin/">dependency plugin</a> is a maven supported plugin that provides several helpful goals for inspecting your dependencies</p>
 <h4 id="dependency-tree">Dependency Tree</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn dependency:tree
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn dependency:tree
 mvn dependency:tree -Dverbose -Dincludes=commons-io
 </code></pre></div><h4 id="graph">Graph</h4>
 <p>You can get a similar representation from the dependency plugin, by generating a visualization of the graph. This
@@ -360,7 +360,7 @@ identifiers.</p>
 Enumerations (CPEs). CPEs are used to identify products, which for the topic of Java assemblies, are
 Java artifact names. Here is an example of a CPE identifier (using the 2.3 format) for
 jackson-databind-2.9.9:</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cpe:2.3:a:fasterxml:jackson-databind:2.9.9:*:*:*:*:*:*:*
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cpe:2.3:a:fasterxml:jackson-databind:2.9.9:*:*:*:*:*:*:*
 </code></pre></div><p>From this scheme, you can recognize common Maven identifiers (groupId: <code>fasterxml</code>, artifactId:
 <code>jackson-databind</code>, and <code>version</code>: <code>2.9.9</code>).</p>
 <h3 id="owasp-dependency-check">OWASP Dependency Check</h3>
@@ -368,7 +368,7 @@ jackson-databind-2.9.9:</p>
 dependencies to CVE information. Luckily, there is an open-source project that does that for you! The OWASP Dependency Check project has a <a href="https://jeremylong.github.io/DependencyCheck/dependency-check-maven/">Maven plugin</a> and CLI that can help on doing assessments of your projects.</p>
 <h3 id="cli">CLI</h3>
 <p>You can install the CLI locally and run a scan of the example service with the following steps. This approach may be desirable as you can quickly assess existing assemblies without necessarily changing their Maven plugins:</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># Download the OWASP Dependency Check CLI install</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># Download the OWASP Dependency Check CLI install</span>
 wget -O owasp-cli.jar https://dl.bintray.com/jeremy-long/owasp/dependency-check-4.0.2-release.zip
 unzip owasp-cli.jar
 </code></pre></div><h3 id="maven-dependency-plugin">Maven Dependency Plugin</h3>
@@ -381,7 +381,7 @@ unzip owasp-cli.jar
 <li>Allow your normal CI flow to validate the PR and to post the status</li>
 </ul>
 <p>Example of leveraging the the versions plugin to prep what changes are possible to be applied:</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn org.codehaus.mojo:versions-maven-plugin:2.7:display-dependency-updates -N -U -l candidates.txt
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn org.codehaus.mojo:versions-maven-plugin:2.7:display-dependency-updates -N -U -l candidates.txt
 </code></pre></div><h2 id="versioning">Versioning</h2>
 <p>It&rsquo;s important to version both your assembly and any reusuable components that you own in a
 way that is consistent and communicates their compatability with existing versions.</p>
@@ -433,7 +433,7 @@ at every release increment.  That being said, once your software is being used i
 <h3 id="troubleshooting-tips">Troubleshooting tips:</h3>
 <p>Many times it is helpful to evaluate the classes being loaded, and what artifact they are originating from. To do this, you can utilize the the -verbose:class:</p>
 <p>To view the contents of the example project, you can do the following:</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># -t: list table of contents for archive </span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># -t: list table of contents for archive </span>
 <span style="color:#007f7f"># -f: specify archive file name</span>
 jar tf target/example-war-1.0-SNAPSHOT.war
 </code></pre></div><h3 id="maven-shade-plugin">maven-shade-plugin</h3>

@@ -37,7 +37,7 @@ Investing can simply be put as a process in which upon *thorough* analysis, prom
 
   In this category, we decide how much to pay for an asset based on what the asset itself will produce. For example when we buy an acre of land, we expect the farm to produce certain average yield over a period of few years.  There can be some years where the owner could be affected by drought etc, there will be some great years where the yields would be decent(based on several factors like better farming equipment or infrastructure etc). Investors can roughly calculate maintenance costs, taxes etc to determine the cash the farm can deliver to the owner. Our job as an investor is take this into account and pay a fair price for a successful investment.
 
-  When investing in stocks having this approach of looking at what the business does few years from now can help investors to be rational in mindset. Owning productive assets such as stocks(ownership in a piece of business) generally results in greater returns over other two categories historically
+  When investing in stocks having this approach of looking at what the business does few years from now can help investors to be rational in mindset. Owning productive assets such as stocks(ownership in a piece of business) generally results in greater returns over the other two categories historically.
 
 
 ```
@@ -53,7 +53,7 @@ It refers to an investment strategy that involves ongoing buying of stocks or bu
 ```yaml
 Accounting is the language of business, so I expect active investors to be well versed with it. 
 ```
-[Active investing](https://www.investopedia.com/terms/a/activeinvesting.asp) - Further explanation 
+[Active investing](https://www.investopedia.com/terms/a/activeinvesting.asp)
 
 **Passive Investing**: 
 

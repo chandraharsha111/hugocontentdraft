@@ -8,25 +8,27 @@
 
     <meta name="author" content="Chandra Harsha Jupalli">
     <meta name="description" content="Assembly Management: Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
-  WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
-  JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.">
+WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.
+EAR: A Enterprise Application Archive.">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Java Learnings"/>
 <meta name="twitter:description" content="Assembly Management: Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
-  WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
-  JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension."/>
+WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.
+EAR: A Enterprise Application Archive."/>
 
     <meta property="og:title" content="Java Learnings" />
 <meta property="og:description" content="Assembly Management: Assembly: An &ldquo;assembly&rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
-  WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
-  JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension." />
+WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
+JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.
+EAR: A Enterprise Application Archive." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.chandraharsha111.com/posts/technical-learnings/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-08-09T19:50:54-05:00" />
 <meta property="article:modified_time" content="2021-08-09T19:50:54-05:00" />
-
 
 
     <title>
@@ -70,7 +72,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/12.0.4/2/twemoji.min.js" integrity="sha512-panBjUGuKarjg0qxHggQULmRf9jB/YVCy238hmzBWUuLeOuwMSuJgJcUv3T+rwXUBZ9zeUvc49ZcCRH+EO0H8g==" crossorigin="anonymous"></script>
     
 
-    <meta name="generator" content="Hugo 0.92.1" />
+    <meta name="generator" content="Hugo 0.111.1">
   </head>
 
   
@@ -177,13 +179,13 @@ of the dependency determines if and how it is pulled in. Only <code>compile</cod
 <h3 id="using-the-jar-command-to-examine-dependencies">Using the jar command to examine dependencies</h3>
 <p>The simplest way to examine the dependencies of you war is to use the <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jar.html">jar command</a> to list or extract the contents of the war</p>
 <p>Try the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jar -tvf target/example-war-1.0-SNAPSHOT.war
-</code></pre></div><h3 id="using-the-dependency-plugin">Using the dependency plugin</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jar -tvf target/example-war-1.0-SNAPSHOT.war
+</span></span></code></pre></div><h3 id="using-the-dependency-plugin">Using the dependency plugin</h3>
 <p>The <a href="http://maven.apache.org/plugins/maven-dependency-plugin/">dependency plugin</a> is a maven supported plugin that provides several helpful goals for inspecting your dependencies</p>
 <h4 id="dependency-tree">Dependency Tree</h4>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn dependency:tree
-mvn dependency:tree -Dverbose -Dincludes=commons-io
-</code></pre></div><h4 id="graph">Graph</h4>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn dependency:tree
+</span></span><span style="display:flex;"><span>mvn dependency:tree -Dverbose -Dincludes=commons-io
+</span></span></code></pre></div><h4 id="graph">Graph</h4>
 <p>You can get a similar representation from the dependency plugin, by generating a visualization of the graph. This
 can be accomplished by using the <a href="https://ferstl.github.io/depgraph-maven-plugin/">depgraph-maven-plugin</a>. This
 plugin will generate a Graphviz (.dot) file, which you can then render into an image.</p>
@@ -360,18 +362,18 @@ identifiers.</p>
 Enumerations (CPEs). CPEs are used to identify products, which for the topic of Java assemblies, are
 Java artifact names. Here is an example of a CPE identifier (using the 2.3 format) for
 jackson-databind-2.9.9:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cpe:2.3:a:fasterxml:jackson-databind:2.9.9:*:*:*:*:*:*:*
-</code></pre></div><p>From this scheme, you can recognize common Maven identifiers (groupId: <code>fasterxml</code>, artifactId:
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cpe:2.3:a:fasterxml:jackson-databind:2.9.9:*:*:*:*:*:*:*
+</span></span></code></pre></div><p>From this scheme, you can recognize common Maven identifiers (groupId: <code>fasterxml</code>, artifactId:
 <code>jackson-databind</code>, and <code>version</code>: <code>2.9.9</code>).</p>
 <h3 id="owasp-dependency-check">OWASP Dependency Check</h3>
 <p>As an assembly owner, we want to utilize tooling that can do this type of assessment of Java
 dependencies to CVE information. Luckily, there is an open-source project that does that for you! The OWASP Dependency Check project has a <a href="https://jeremylong.github.io/DependencyCheck/dependency-check-maven/">Maven plugin</a> and CLI that can help on doing assessments of your projects.</p>
 <h3 id="cli">CLI</h3>
 <p>You can install the CLI locally and run a scan of the example service with the following steps. This approach may be desirable as you can quickly assess existing assemblies without necessarily changing their Maven plugins:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># Download the OWASP Dependency Check CLI install</span>
-wget -O owasp-cli.jar https://dl.bintray.com/jeremy-long/owasp/dependency-check-4.0.2-release.zip
-unzip owasp-cli.jar
-</code></pre></div><h3 id="maven-dependency-plugin">Maven Dependency Plugin</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#007f7f"># Download the OWASP Dependency Check CLI install</span>
+</span></span><span style="display:flex;"><span>wget -O owasp-cli.jar https://dl.bintray.com/jeremy-long/owasp/dependency-check-4.0.2-release.zip
+</span></span><span style="display:flex;"><span>unzip owasp-cli.jar
+</span></span></code></pre></div><h3 id="maven-dependency-plugin">Maven Dependency Plugin</h3>
 <p>You can then include the Maven plugin in your builds to fail builds when CVEs with a CVSS score that is too high. In a later section, we will highlight how we leverage this in our build as part of leveraging maven-base-pom.</p>
 <h3 id="automating-your-dependency-updates">Automating your dependency updates</h3>
 <p>As part of managing your dependencies in your assembly, a common goal is just keeping your dependencies up-to-date. With te case of security vunlerabilities, you generally are in a better position when you are up-to-date on your Java dependencies as you have included more fixes and you have less older versions which have had time to identify CVEs. To automate this task you can:</p>
@@ -381,8 +383,8 @@ unzip owasp-cli.jar
 <li>Allow your normal CI flow to validate the PR and to post the status</li>
 </ul>
 <p>Example of leveraging the the versions plugin to prep what changes are possible to be applied:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn org.codehaus.mojo:versions-maven-plugin:2.7:display-dependency-updates -N -U -l candidates.txt
-</code></pre></div><h2 id="versioning">Versioning</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn org.codehaus.mojo:versions-maven-plugin:2.7:display-dependency-updates -N -U -l candidates.txt
+</span></span></code></pre></div><h2 id="versioning">Versioning</h2>
 <p>It&rsquo;s important to version both your assembly and any reusuable components that you own in a
 way that is consistent and communicates their compatability with existing versions.</p>
 <p>The accepted industry standard is known as <a href="http://semver.org/">semantic versioning</a>
@@ -433,10 +435,10 @@ at every release increment.  That being said, once your software is being used i
 <h3 id="troubleshooting-tips">Troubleshooting tips:</h3>
 <p>Many times it is helpful to evaluate the classes being loaded, and what artifact they are originating from. To do this, you can utilize the the -verbose:class:</p>
 <p>To view the contents of the example project, you can do the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># -t: list table of contents for archive </span>
-<span style="color:#007f7f"># -f: specify archive file name</span>
-jar tf target/example-war-1.0-SNAPSHOT.war
-</code></pre></div><h3 id="maven-shade-plugin">maven-shade-plugin</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#007f7f"># -t: list table of contents for archive </span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># -f: specify archive file name</span>
+</span></span><span style="display:flex;"><span>jar tf target/example-war-1.0-SNAPSHOT.war
+</span></span></code></pre></div><h3 id="maven-shade-plugin">maven-shade-plugin</h3>
 <p>The maven shade plugin supports combining all dependencies into a single jar. When duplicate classes are discovered only one can survive, the highlander version of the class may not include all the methods required.</p>
 <h1 id="java-basics-java8-jav16-features">Java Basics: (Java8-Jav16 Features)</h1>
 <ul>
@@ -594,7 +596,7 @@ sensitive information.</li>
         
           2020 -
         
-        2022
+        2023
          Chandra Harsha Jupalli 
       
       
@@ -610,7 +612,7 @@ sensitive information.</li>
     
       
         
-        <script src="/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js"></script>
+        <script src="/js/dark-mode.min.c2d8a1f8f2660e4a46d776277c72695a1e0ca65939d79f754441d47551604af5.js"></script>
       
     
 

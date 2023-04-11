@@ -8,7 +8,7 @@ draft: false
 ```
 
 #### Software Development Experience
-- *Cerner Corporation, Software Engineer, 2018-Present* 
+- *Cerner Corporation, Software Engineer, June 2018-Oct 2022* 
     - Responsible for driving API reviews across micro services to eliminate redundant API’s in Millennium an EHR product.
     - Developed sidecar functionality, which casts SRV requests to HTTP, created docker images and deployed the service using Helm to Kubernetes.
     - Gained experience working with CI-CD concepts using Jenkins Pipelines.

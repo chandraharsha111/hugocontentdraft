@@ -21,7 +21,7 @@ draft: false
   - Created endpoints in Spring MVC to add export functionality, implemented CRUD operations using Hibernate (HQL), Implemented UI using HTML, CSS, JavaScript, jQuery Data Table API to create responsive web pages.
   - Mentored new associates that joined between Aug 2020 to Dec 2022
 - *Cognizant technology solutions, 2015-2016*
-    - Formulated and Implemented unit tests in .Net Platform using FAKES in C#
+    - Formulated and Implemented unit tests in .Net Platform using FAKES in C# to ensure code functionality and to improve code coverage from 60 percent to 90 percent
   
 #### Education
    - Masters degree in Computer Engineering from Syracuse University - 2018

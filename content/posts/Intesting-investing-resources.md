@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2020-11-27T11:56:21-06:00
-title = "Investing resources"
+title = "Random Interests"
 description = ""
 slug = ""
 authors = []
@@ -13,7 +13,7 @@ series = []
 
 # Books 
 
-## Investing 
+### Investing 
  - [One up on WallStreet](https://www.amazon.com/One-Up-Wall-Street-Already/dp/0743200403)
  - [Beating the street](https://www.amazon.com/Beating-Street-Peter-Lynch/dp/0671891634)
  - [Intelligent Investor](https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661)
@@ -37,19 +37,19 @@ series = []
  - [Outsiders](https://www.goodreads.com/book/show/13586932-the-outsiders)
  - [Richer Wiser Happier](https://www.williamgreenwrites.com/richer-wiser-happier/)
 
- ## Biographies 
+ ### Biographies 
  - [The Snowball](https://en.wikipedia.org/wiki/The_Snowball:_Warren_Buffett_and_the_Business_of_Life)
  - [Ride of a lifetime](https://www.amazon.com/Ride-Lifetime-Lessons-Learned-Company/dp/0399592091)
  - [Poor Charlies Almanack](https://www.amazon.com/Poor-Charlies-Almanack-Charles-Expanded/dp/1578645018)
  - [Titan](https://www.amazon.com/Titan-Life-John-Rockefeller-Sr/dp/1400077303)
 
-## History 
+### History 
  - [Sapiens](https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari/dp/0062316095)
  - [Homo Deus](https://www.amazon.com/Homo-Deus-Brief-History-Tomorrow/dp/0062464310)
  - [21 lessons for 21st century](https://www.amazon.com/Lessons-21st-Century-Yuval-Harari/dp/0525512179)
  - [Guns Germs and Steel](https://www.goodreads.com/book/show/1842.Guns_Germs_and_Steel)
   
-# Videos 
+### Investors 
   - [Charlie Munger](https://www.youtube.com/watch?v=S9HgIGzOENA)
   - [Warren Buffer](https://www.youtube.com/watch?v=NwwUb_QoF18)
   - [Li Lu](https://www.youtube.com/watch?v=y3c2PKupiu8)
@@ -57,7 +57,7 @@ series = []
   - [Lauren Templeton](https://www.youtube.com/watch?v=K-vW9ByuXTE) 
   - [John Boggle](https://www.youtube.com/watch?v=3uJbHREmUs4)
 
-# Financial websites and blogs 
+### Interesting websites and blogs 
   - [Economic Principles Ray Dalio](https://economicprinciples.org/)
   - [Howard Marks memos](https://www.oaktreecapital.com/insights/howard-marks-memos)
   - [Monish Pobrai](http://www.chaiwithpabrai.com/)
@@ -66,8 +66,6 @@ series = []
   - [Dataroma](https://www.dataroma.com/m/home.php)
   - [Value Line](https://www.valueline.com/)
   - [Magic Formula](https://www.magicformulainvesting.com/)
-
-# Intersting blogs 
-- [Gates Notes](https://www.gatesnotes.com)
-- [Gap Minder](https://www.gapminder.org)
-- [USA facts](https://usafacts.org)
+  - [Gates Notes](https://www.gatesnotes.com)
+  - [Gap Minder](https://www.gapminder.org)
+  - [USA facts](https://usafacts.org)

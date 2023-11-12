@@ -5,72 +5,24 @@
     <link>https://www.chandraharsha111.com/</link>
     <description>Recent content on Chandra Harsha Jupalli</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 14 Aug 2021 14:34:07 -0500</lastBuildDate><atom:link href="https://www.chandraharsha111.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AWS,API Specification,Jenkins and OAUTH </title>
-      <link>https://www.chandraharsha111.com/posts/apis_and_ci-cd/</link>
-      <pubDate>Sat, 14 Aug 2021 14:34:07 -0500</pubDate>
-      
-      <guid>https://www.chandraharsha111.com/posts/apis_and_ci-cd/</guid>
-      <description>CI CD Jenkins, Swagger, API concepts, Git Git commands API best practices Swagger Jenkins aws-basics-dzone Sidecar Shell scripting curl oAuth1 and OAuth2 </description>
-    </item>
-    
-    <item>
-      <title>Object Oriented Design, Ruby, Kubernetes, JavaScript</title>
-      <link>https://www.chandraharsha111.com/posts/ruby-js-kubernetes-design/</link>
-      <pubDate>Tue, 10 Aug 2021 19:50:00 -0500</pubDate>
-      
-      <guid>https://www.chandraharsha111.com/posts/ruby-js-kubernetes-design/</guid>
-      <description>Java Script and design principles SOLID principles Object Oriented design Object Models DOM Eloquent JS Book JS in browser Intro to JavaScript Kubernetes, docker, Spinakker, Helm: Docker Kubernetes Kubectl MiniKube Spinakker HelmCharts NewRelic Ruby: Ruby basics Ruby tutorial Ruby online org Tutorials point </description>
-    </item>
-    
-    <item>
-      <title>Java Learnings</title>
-      <link>https://www.chandraharsha111.com/posts/technical-learnings/</link>
-      <pubDate>Mon, 09 Aug 2021 19:50:54 -0500</pubDate>
-      
-      <guid>https://www.chandraharsha111.com/posts/technical-learnings/</guid>
-      <description>Assembly Management: Assembly: An &amp;ldquo;assembly&amp;rdquo; is a group of files, directories, and dependencies that are assembled into an archive format and distributed.
-WAR: A Web application Archive. For the purpose of this workshop, we will be using this in our tutorials.
-JAR: A Java Archive which include a Java specific manifest file. They are built on the ZIP (file format) and typically have the .jar file extension.
-EAR: A Enterprise Application Archive.</description>
-    </item>
-    
-    <item>
-      <title>Berkshire Annual reports summary</title>
-      <link>https://www.chandraharsha111.com/posts/berkshire-annual-reports/</link>
-      <pubDate>Sat, 06 Feb 2021 12:59:41 -0600</pubDate>
-      
-      <guid>https://www.chandraharsha111.com/posts/berkshire-annual-reports/</guid>
-      <description>Bekshire Annual Reports Reading Notes Content from https://www.berkshirehathaway.com/reports.html 1999 Equity investors currently seem wildly optimistic in their expectations about future returns Share repurchases must be done only when business needs are take care of and only when the stock price is below its intrinsic value 2000 How to Think About Investing The first investment primer was written by Aesop in 600 B.C. He said, &amp;lsquo;A bird in the hand is worth two in the bush.</description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Nov 2020 13:16:34 -0600</lastBuildDate><atom:link href="https://www.chandraharsha111.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Software Development Resources</title>
-      <link>https://www.chandraharsha111.com/posts/software-development-resources-and-learnings/</link>
+      <link>https://www.chandraharsha111.com/posts/software-development-resources/</link>
       <pubDate>Sat, 28 Nov 2020 13:16:34 -0600</pubDate>
       
-      <guid>https://www.chandraharsha111.com/posts/software-development-resources-and-learnings/</guid>
-      <description>Blogs and websites Dr Fawcett Dr KevinDu Bob Martin Martin Flower Basic Introduction Videos Virtualization Kubernetes Vs Docker Containers Vs VM Microservices Cloud Native Big data Kafka Helm Continuous Integration Dev Resources Ripgrep Brew Heap Analysis Host Hugo on GitHub Oh-my-zsh </description>
+      <guid>https://www.chandraharsha111.com/posts/software-development-resources/</guid>
+      <description>Blogs and Websites Dr Fawcett Dr KevinDu Bob Martin Martin Flower Basic Introduction Videos Virtualization Kubernetes Vs Docker Containers Vs VM Microservices Cloud Native Big data Kafka Helm Continuous Integration Technologies Git commands API best practices Swagger Jenkins aws-basics-dzone Sidecar Shell scripting curl oAuth1 and OAuth2 DOM Eloquent JS Book JS in browser Intro to JavaScript Design Principles SOLID principles Object Oriented design Object Models Kubernetes, docker, Spinakker, Helm: Docker Kubernetes Kubectl MiniKube Spinakker HelmCharts NewRelic Ruby: Ruby basics Ruby tutorial Ruby online org Tutorials point Dev Resources Ripgrep Brew Heap Analysis Host Hugo on GitHub Oh-my-zsh </description>
     </item>
     
     <item>
-      <title>Investing resources</title>
+      <title>Random Interests</title>
       <link>https://www.chandraharsha111.com/posts/intesting-investing-resources/</link>
       <pubDate>Fri, 27 Nov 2020 11:56:21 -0600</pubDate>
       
       <guid>https://www.chandraharsha111.com/posts/intesting-investing-resources/</guid>
-      <description>Books Investing One up on WallStreet Beating the street Intelligent Investor Common Stocks and Uncommon Profits Principles RayDalio Business Adventures Dhandho Investor Making of American Capitalist Payback time Invested Random Walk down Wall Street Little book of common sense Investing Wealth of Nations Value Investing from Graham to Buffet Great crash of 1929 Nick sleep letters Psychology of money 100 to 1 in the stock market Margin of Safety Stress Test Outsiders Richer Wiser Happier Biographies The Snowball Ride of a lifetime Poor Charlies Almanack Titan History Sapiens Homo Deus 21 lessons for 21st century Guns Germs and Steel Videos Charlie Munger Warren Buffer Li Lu Monish Pobrai Lauren Templeton John Boggle Financial websites and blogs Economic Principles Ray Dalio Howard Marks memos Monish Pobrai AshwathDamodaran Phil Town Dataroma Value Line Magic Formula Intersting blogs Gates Notes Gap Minder USA facts </description>
-    </item>
-    
-    <item>
-      <title>Common stocks and uncommon profits</title>
-      <link>https://www.chandraharsha111.com/posts/common-stocks-and-uncommon-profits/</link>
-      <pubDate>Thu, 26 Nov 2020 23:17:22 -0600</pubDate>
-      
-      <guid>https://www.chandraharsha111.com/posts/common-stocks-and-uncommon-profits/</guid>
-      <description>Learnings from Phil Fisher Common stocks and uncommon profits Finding an outstanding company and staying with it through fluctuations could be far more profitable than buying cheap and selling dear Even if depression occurs it could be short since FED or government can lower taxes, lower interest rates etc. which was not possible in 1929 Greatest investment reward comes to people those by luck or sense find an occasional company that can grow sales and profits far more than industry over years.</description>
+      <description>Books Investing One up on WallStreet Beating the street Intelligent Investor Common Stocks and Uncommon Profits Principles RayDalio Business Adventures Dhandho Investor Making of American Capitalist Payback time Invested Random Walk down Wall Street Little book of common sense Investing Wealth of Nations Value Investing from Graham to Buffet Great crash of 1929 Nick sleep letters Psychology of money 100 to 1 in the stock market Margin of Safety Stress Test Outsiders Richer Wiser Happier Biographies The Snowball Ride of a lifetime Poor Charlies Almanack Titan History Sapiens Homo Deus 21 lessons for 21st century Guns Germs and Steel Investors Charlie Munger Warren Buffer Li Lu Monish Pobrai Lauren Templeton John Boggle Interesting websites and blogs Economic Principles Ray Dalio Howard Marks memos Monish Pobrai AshwathDamodaran Phil Town Dataroma Value Line Magic Formula Gates Notes Gap Minder USA facts </description>
     </item>
     
     <item>
@@ -92,19 +44,6 @@ EAR: A Enterprise Application Archive.</description>
     </item>
     
     <item>
-      <title>Book Summaries and Investing Basics for Active Investing</title>
-      <link>https://www.chandraharsha111.com/posts/book-summaries/</link>
-      <pubDate>Wed, 25 Nov 2020 21:59:09 -0600</pubDate>
-      
-      <guid>https://www.chandraharsha111.com/posts/book-summaries/</guid>
-      <description>Compound Interest is the eighth wonder of the world. He who understand it, earns it. He who does not pays it. Intelligent Investor Stocks do well when inflation is moderate, bad when low, erratic when high inflation
-Treasury bonds with no tax to combat inflation like Public Provident Fund(India) - about 10%
-Adequate but not excessive diversification
-Have 25% in Bonds and rest in Stocks –(Cushion for emotional stability)
-Invest in only companies you know (Worked for, Use Products) and aggressively in bear market</description>
-    </item>
-    
-    <item>
       <title>Thoughts on Investing</title>
       <link>https://www.chandraharsha111.com/posts/thoughts-on-investing/</link>
       <pubDate>Tue, 24 Nov 2020 17:35:28 -0600</pubDate>
@@ -112,6 +51,15 @@ Invest in only companies you know (Worked for, Use Products) and aggressively in
       <guid>https://www.chandraharsha111.com/posts/thoughts-on-investing/</guid>
       <description>Bird in the hand is worth two in the bush - Aesop 600BC Investing can simply be put as a process in which upon thorough analysis, promises safety of principal and adequate return. For anyone looking into investing understanding available categories, before thinking about available choices within those categories could help with rate of return expectations. Broadly speaking I think most investors have these following options available with them
 Commodities Currency Denominated Investments Productive Assets Commodities: Gold, Silver, Oil, Cotton</description>
+    </item>
+    
+    <item>
+      <title>Berkshire 10K&#39;s</title>
+      <link>https://www.chandraharsha111.com/posts/berkshire-annual-reports/</link>
+      <pubDate>Wed, 06 Feb 2019 12:59:41 -0600</pubDate>
+      
+      <guid>https://www.chandraharsha111.com/posts/berkshire-annual-reports/</guid>
+      <description>Bekshire Annual Reports Reading Notes Content from https://www.berkshirehathaway.com/reports.html 1999 Equity investors currently seem wildly optimistic in their expectations about future returns Share repurchases must be done only when business needs are take care of and only when the stock price is below its intrinsic value 2000 How to Think About Investing The first investment primer was written by Aesop in 600 B.C. He said, &amp;lsquo;A bird in the hand is worth two in the bush.</description>
     </item>
     
   </channel>

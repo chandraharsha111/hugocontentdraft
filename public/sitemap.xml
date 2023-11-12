@@ -2,32 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.chandraharsha111.com/posts/apis_and_ci-cd/</loc>
-    <lastmod>2021-08-14T14:34:07-05:00</lastmod>
-  </url><url>
     <loc>https://www.chandraharsha111.com/</loc>
-    <lastmod>2021-08-14T14:34:07-05:00</lastmod>
+    <lastmod>2020-11-28T13:16:34-06:00</lastmod>
   </url><url>
     <loc>https://www.chandraharsha111.com/posts/</loc>
-    <lastmod>2021-08-14T14:34:07-05:00</lastmod>
+    <lastmod>2020-11-28T13:16:34-06:00</lastmod>
   </url><url>
-    <loc>https://www.chandraharsha111.com/posts/ruby-js-kubernetes-design/</loc>
-    <lastmod>2021-08-10T19:50:00-05:00</lastmod>
-  </url><url>
-    <loc>https://www.chandraharsha111.com/posts/technical-learnings/</loc>
-    <lastmod>2021-08-09T19:50:54-05:00</lastmod>
-  </url><url>
-    <loc>https://www.chandraharsha111.com/posts/berkshire-annual-reports/</loc>
-    <lastmod>2021-02-06T12:59:41-06:00</lastmod>
-  </url><url>
-    <loc>https://www.chandraharsha111.com/posts/software-development-resources-and-learnings/</loc>
+    <loc>https://www.chandraharsha111.com/posts/software-development-resources/</loc>
     <lastmod>2020-11-28T13:16:34-06:00</lastmod>
   </url><url>
     <loc>https://www.chandraharsha111.com/posts/intesting-investing-resources/</loc>
     <lastmod>2020-11-27T11:56:21-06:00</lastmod>
-  </url><url>
-    <loc>https://www.chandraharsha111.com/posts/common-stocks-and-uncommon-profits/</loc>
-    <lastmod>2020-11-26T23:17:22-06:00</lastmod>
   </url><url>
     <loc>https://www.chandraharsha111.com/projects/</loc>
     <lastmod>2020-11-26T17:36:13-06:00</lastmod>
@@ -35,17 +20,13 @@
     <loc>https://www.chandraharsha111.com/about/</loc>
     <lastmod>2020-11-26T17:36:03-06:00</lastmod>
   </url><url>
-    <loc>https://www.chandraharsha111.com/posts/book-summaries/</loc>
-    <lastmod>2020-11-25T21:59:09-06:00</lastmod>
-  </url><url>
     <loc>https://www.chandraharsha111.com/posts/thoughts-on-investing/</loc>
     <lastmod>2020-11-24T17:35:28-06:00</lastmod>
   </url><url>
-    <loc>https://www.chandraharsha111.com/authors/</loc>
+    <loc>https://www.chandraharsha111.com/posts/berkshire-annual-reports/</loc>
+    <lastmod>2019-02-06T12:59:41-06:00</lastmod>
   </url><url>
     <loc>https://www.chandraharsha111.com/categories/</loc>
-  </url><url>
-    <loc>https://www.chandraharsha111.com/series/</loc>
   </url><url>
     <loc>https://www.chandraharsha111.com/tags/</loc>
   </url>

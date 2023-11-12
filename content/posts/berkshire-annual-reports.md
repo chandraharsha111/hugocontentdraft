@@ -1,7 +1,7 @@
 +++ 
 draft = false
-date = 2021-02-06T12:59:41-06:00
-title = "Berkshire Annual reports summary"
+date = 2019-02-06T12:59:41-06:00
+title = "Berkshire 10K's"
 description = ""
 slug = ""
 authors = []
@@ -11,7 +11,7 @@ externalLink = ""
 series = []
 +++
 
-# Bekshire Annual Reports Reading Notes
+# Bekshire Annual Reports Reading Notes 
 
 ```yaml
  Content from https://www.berkshirehathaway.com/reports.html 
@@ -38,10 +38,10 @@ investors anything they will buy.
   - Second, speculation is most dangerous when it looks easiest.
 - The Difference Between Growth and Value Stocks
 **There is no distinction in our minds between growth and value.  Every stock is a value stock to us. The potential growth of the company is simply one factor that we consider.**
-### Valuation Matters
+#### Valuation Matters
 - Sooner or later, the amount of cash a business can disgorge will determine its value in the market.
 
-### Miscellaneous
+#### Miscellaneous
 - A small leak can sink a great ship.
 - Berkshire will always be a home to sellers that care about business
 - References to EBITDA make us shudder, does management think the tooth fairy pays for capital expenditures?
@@ -274,7 +274,7 @@ so, in delivering what people don’t yet know they want.
 - The productivity gains that I’ve just spelled out(20th century innovations) – and countless others that have been achieved in America have delivered awesome benefits to society. That’s the reason our citizens, as a whole, have enjoyed – and will continue to enjoy – major gains in the goods and services they receive.
 - To this thought there are offsets. First, the productivity gains achieved in recent years have largely benefitted the wealthy. Second, productivity gains frequently cause upheaval: Both capital and labor can pay a terrible price when innovation or new efficiencies upend their worlds.
 
-### Risks: 
+#### Risks: 
  - The truly important risks, however, are usually well known.
 Beyond that, a 10-K’s catalog of risks is seldom of aid in assessing: 
   -  (1) the probability of the threatening event actually occurring; 

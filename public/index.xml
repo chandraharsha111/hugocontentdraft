@@ -6,11 +6,11 @@
     <description>Recent content on Chandra Harsha Jupalli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Nov 2020 13:16:34 -0600</lastBuildDate><atom:link href="https://www.chandraharsha111.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Nov 2022 13:16:34 -0600</lastBuildDate><atom:link href="https://www.chandraharsha111.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Software Development Resources</title>
       <link>https://www.chandraharsha111.com/posts/software-development-resources/</link>
-      <pubDate>Sat, 28 Nov 2020 13:16:34 -0600</pubDate>
+      <pubDate>Mon, 28 Nov 2022 13:16:34 -0600</pubDate>
       
       <guid>https://www.chandraharsha111.com/posts/software-development-resources/</guid>
       <description>Blogs and Websites Dr Fawcett Dr KevinDu Bob Martin Martin Flower Basic Introduction Videos Virtualization Kubernetes Vs Docker Containers Vs VM Microservices Cloud Native Big data Kafka Helm Continuous Integration Technologies Git commands API best practices Swagger Jenkins aws-basics-dzone Sidecar Shell scripting curl oAuth1 and OAuth2 DOM Eloquent JS Book JS in browser Intro to JavaScript Design Principles SOLID principles Object Oriented design Object Models Kubernetes, docker, Spinakker, Helm: Docker Kubernetes Kubectl MiniKube Spinakker HelmCharts NewRelic Ruby: Ruby basics Ruby tutorial Ruby online org Tutorials point Dev Resources Ripgrep Brew Heap Analysis Host Hugo on GitHub Oh-my-zsh </description>
@@ -19,10 +19,20 @@
     <item>
       <title>Random Interests</title>
       <link>https://www.chandraharsha111.com/posts/intesting-investing-resources/</link>
-      <pubDate>Fri, 27 Nov 2020 11:56:21 -0600</pubDate>
+      <pubDate>Wed, 27 Oct 2021 11:56:21 -0600</pubDate>
       
       <guid>https://www.chandraharsha111.com/posts/intesting-investing-resources/</guid>
       <description>Books Investing One up on WallStreet Beating the street Intelligent Investor Common Stocks and Uncommon Profits Principles RayDalio Business Adventures Dhandho Investor Making of American Capitalist Payback time Invested Random Walk down Wall Street Little book of common sense Investing Wealth of Nations Value Investing from Graham to Buffet Great crash of 1929 Nick sleep letters Psychology of money 100 to 1 in the stock market Margin of Safety Stress Test Outsiders Richer Wiser Happier Biographies The Snowball Ride of a lifetime Poor Charlies Almanack Titan History Sapiens Homo Deus 21 lessons for 21st century Guns Germs and Steel Investors Charlie Munger Warren Buffer Li Lu Monish Pobrai Lauren Templeton John Boggle Interesting websites and blogs Economic Principles Ray Dalio Howard Marks memos Monish Pobrai AshwathDamodaran Phil Town Dataroma Value Line Magic Formula Gates Notes Gap Minder USA facts </description>
+    </item>
+    
+    <item>
+      <title>Thoughts on Investing</title>
+      <link>https://www.chandraharsha111.com/posts/thoughts-on-investing/</link>
+      <pubDate>Thu, 24 Dec 2020 17:35:28 -0600</pubDate>
+      
+      <guid>https://www.chandraharsha111.com/posts/thoughts-on-investing/</guid>
+      <description>Bird in the hand is worth two in the bush - Aesop 600BC Investing can simply be put as a process in which upon thorough analysis, promises safety of principal and adequate return. For anyone looking into investing understanding available categories, before thinking about available choices within those categories could help with rate of return expectations. Broadly speaking I think most investors have these following options available with them
+Commodities Currency Denominated Investments Productive Assets Commodities: Gold, Silver, Oil, Cotton</description>
     </item>
     
     <item>
@@ -41,16 +51,6 @@
       
       <guid>https://www.chandraharsha111.com/about/</guid>
       <description>Good Judgement comes from experience and experience comes from bad judgemement - Jim Horning Software Development Experience Oracle Corporation, Software Engineer, Oct 2022 - Present Implemented new features and collaborated on a Java based development platform to provide a consistent means of developing microservices and handled central cloud deployments. Managed Java dependencies, identified, and fixed security vulnerabilities or CVEs for microservices. Worked on a Cadence bundles feature to manage all the enterprise stack dependencies for enterprise Java services.</description>
-    </item>
-    
-    <item>
-      <title>Thoughts on Investing</title>
-      <link>https://www.chandraharsha111.com/posts/thoughts-on-investing/</link>
-      <pubDate>Tue, 24 Nov 2020 17:35:28 -0600</pubDate>
-      
-      <guid>https://www.chandraharsha111.com/posts/thoughts-on-investing/</guid>
-      <description>Bird in the hand is worth two in the bush - Aesop 600BC Investing can simply be put as a process in which upon thorough analysis, promises safety of principal and adequate return. For anyone looking into investing understanding available categories, before thinking about available choices within those categories could help with rate of return expectations. Broadly speaking I think most investors have these following options available with them
-Commodities Currency Denominated Investments Productive Assets Commodities: Gold, Silver, Oil, Cotton</description>
     </item>
     
     <item>

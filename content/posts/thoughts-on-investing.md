@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2020-11-24T17:35:28-06:00
+date = 2020-12-24T17:35:28-06:00
 title = "Thoughts on Investing"
 description = ""
 slug = ""

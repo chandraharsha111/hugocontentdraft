@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2020-11-28T13:16:34-06:00
+date = 2022-11-28T13:16:34-06:00
 title = "Software Development Resources"
 description = ""
 slug = ""

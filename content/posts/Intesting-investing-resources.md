@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2020-11-27T11:56:21-06:00
+date = 2021-10-27T11:56:21-06:00
 title = "Random Interests"
 description = ""
 slug = ""

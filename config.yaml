@@ -252,7 +252,7 @@ params:
       - title: "Master of Science in Computer Engineering"
         school:
           name: "Syracuse University, Syracuse, New York"
-          url: "https://www.ottawa.edu/"
+          url: "https://www.syracuse.edu/"
         date: "August 2016 - May 2018"
         GPA: "3.7 out of 4.0"
         content: |-
@@ -265,7 +265,7 @@ params:
       - title: "Bachelor of Science in Computer Science"
         school:
           name: "SRM University, Chennai, India"
-          url: "https://www.ottawa.edu/"
+          url: "https://www.srmist.edu.in/"
         date: "June 2011 - May 2015"
         GPA: "9.3 out of 10.0"
         content: |-

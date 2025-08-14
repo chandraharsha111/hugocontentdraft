@@ -58,7 +58,7 @@ series = []
 * [HelmCharts](https://helm.sh/)
 * [NewRelic](https://learn.newrelic.com/get-started-with-apm)
 
-# Ruby:
+# Ruby
 * [Ruby basics](https://www.youtube.com/watch?v=Dji9ALCgfpM)
 * [Ruby tutorial](https://www.javatpoint.com/ruby-tutorial)
 * [Ruby online org](https://www.learnrubyonline.org/en/Welcome)

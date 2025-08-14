@@ -131,7 +131,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "https://drive.google.com/file/d/17BkKeRB1thNlUQtIVUO-sVKlRVcAfdGM/view?usp=drive_link"
+      url: "https://drive.google.com/file/d/118--1RZpq7N04amOJhdw1M9fzSBnNTDa/view"
       download: true
       newPage: false
     socialLinks:
@@ -192,13 +192,16 @@ params:
           content: Working as an associate senior software engineer at Oracle
         content: | 
          
-          - Designed and implemented tenant-specific namespaces to simplify microservice deployments using Kubernetes
-          - Implemented new features and collaborated on a Java-based development platform to provide a consistent means of developing microservices and handled central cloud deployments
-          - Managed platform-level dependencies; Identified and fixed security vulnerabilities or CVEs for microservices
-          - Worked on a Cadence bundles feature to manage about 10 enterprise stack dependencies for 200 enterprise Java services
-          - Implemented features related to migrating Millennium web services to Oracle Cloud
-          - Automated the API review process by creating a Jenkins Job to assign approved API reviewers
-          - Worked on support roles to help answer platform related questions for over 200 service teams
+          - Designed and implemented a barcode scan matching framework that automates data population for medical professional before administering the medications, significantly reducing manual entry errors.
+          - Orchestrated a large-scale migration to Jakarta namespace for a microservices platform, leading the transformation of 10 core artifacts.
+          - Designed and implemented tenant-specific namespaces migration for a platform microservice that monitors the service health of 300 microservices and a Edge service that handles traffic for the microservies platform. 
+          - Automated the deployment of 300 microservices to all newly onboarded domains, streamlining the deployment process across development, staging, and production environments.
+          - Designed and developed public APIs for Millennium EHRC Procedures microservice, expanding its functionality to third-party developers and driving new integration opportunities.
+          - Led and managed the API review management process in OHAI to eliminate redundant APIs in Millennium, an EHR product. Owned the entire process by automating the review process by creating a Jenkins Job that assigns approved API reviewers. 
+          - Analyzed and remediated critical platform-level CVEs, protecting 250 microservices by addressing 20+ vulnerabilities quarterly.
+          - Worked on a Cadence bundles feature to manage about 10 enterprise stack dependencies for 200 enterprise Java services. 
+          - Managed 20 platform level dependencies used by 250 microservices to enhanced system reliability and mitigate risks associated with dependency conflicts.
+          - Served as a primary technical resource for 250+ service teams, resolving platform-related questions and improving overall system security and stability.
 
       - job: "Software Developer"
         company: "Cerner Corporation "
@@ -209,13 +212,10 @@ params:
           content: Worked as a software engineer for 4 years at Cerner in Kansas City, MO
         content: |
 
-          - Developed automation scripts and functionality that facilitated shadowing and canarying micro servicemigrations
-          - Implemented Auth support for sidecar service, which takes in SRV request and casts it to HTTP, and deployed the service using Helm to Kubernetes
-          -  Led API reviews across micro services to eliminate redundant APIs in Millennium, an EHR product
-          - Leveraged Jenkins to create multibranched pipelines across several libraries to improve CI-CD
-          - Created endpoints in Spring MVC to add export functionality, implemented CRUD operations using Hibernate (HQL),
-          - Implemented UI using HTML, CSS, JavaScript, jQuery Data Table API to create responsive web pages
-          - Mentored new associates who joined between Aug 2020 to Dec 2022
+          - Developed automation scripts that facilitated shadowing and canarying for 30 microservices, ensuring a seamless move to AWS clusters for the legacy EJS services. 
+          - Implemented Auth support for 100+ Enterprise Java Services using SRV sidecar feature, and deployed the service using Helm to Kubernetes. This solution transparently converted SRV requests to HTTP, eliminating the need for teams to create new microservices and accelerating cloud adoption for critical enterprise workflows.
+          - Improved CI/CD capabilities across multiple libraries by engineering multibranched Jenkins pipelines, enhancing deployment efficiency.
+          - Developed new platform features and mentored five associates over three years, building a Java-based microservices platform and handling centralized cloud deployments for 250+ microservices.
 
       - job: "Program Analyst"
         company: "Cognizant"
@@ -226,9 +226,9 @@ params:
           content: Worked as a Program Analyst in Hyderabad, India for 1 year at Cognizant
         content: |
       
-          - Formulated and Implemented unit tests in .Net Platform using FAKES in C# to ensure code functionality and improved code coverage from 60 to 90 percent
-          - Collaborated with team members via Agile ceremonies and Scaled Agile Framework (SAFe)
-  
+          - Developed and implemented key ASP.NET REST endpoints and corresponding responsive UI components with HTML, CSS, and jQuery to support a Schneider Electric monitoring dashboard.
+          - Significantly improved code quality and reliability by increasing unit test coverage for the feature from 60% to 90% using Fakes in C#.
+
   # Education
   education:
     enable: true

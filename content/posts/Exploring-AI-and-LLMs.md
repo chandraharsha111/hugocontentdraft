@@ -18,7 +18,6 @@ Have you ever wondered how AI chatbots can grasp your questions and reply so eff
 
 ## Table of contents
 
-- [Overview of LLM processing](#visual-overview-of-llm-processing-flow)
 - [Understanding AI basics](#ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy)
 - [Core components of LLMs](#component-spotlights-key-elements-of-the-llm-process)
 - [Exploring AI models and technology](#llm-landscape-comparing-leading-models)
@@ -27,39 +26,6 @@ Have you ever wondered how AI chatbots can grasp your questions and reply so eff
 
 ---
 
-## Visual overview of LLM processing flow
-
-```mermaid
-graph TD
-    Input["User Input"] --> RAG["RAG"]
-    RAG --> VectorDB["Vector DB"]
-    RAG --> MCP["MCP Server"]
-    VectorDB --> LLM["LLM"]
-    MCP --> LLM
-    RAG --> LLM
-    LLM --> Output["Output"]
-```
-
-```dot
-digraph G {
-    rankdir=TB;
-    Input [label="User Input"];
-    RAG [label="RAG"];
-    VectorDB [label="Vector DB"];
-    MCP [label="MCP Server"];
-    LLM [label="LLM"];
-    Output [label="Output"];
-    Input -> RAG;
-    RAG -> VectorDB;
-    RAG -> MCP;
-    VectorDB -> LLM;
-    MCP -> LLM;
-    RAG -> LLM;
-    LLM -> Output;
-}
-```
-
-
 ## AI made simple: Understanding the flowchart and transformers with a library analogy
 
 This analogy provides a foundational understanding of AI processes. As we progress, we'll explore the technical details behind these components.
@@ -67,7 +33,7 @@ This analogy provides a foundational understanding of AI processes. As we progre
 Whether you're new to technology or just curious, understanding how intelligent language systems like chatbots or AI assistants operate can feel a bit overwhelming at first. Let's simplify it by breaking down the flowchart in this document and the concept of "transformers" (the core engine behind these systems) using relatable, everyday examples.
 
 **The Flow Chart Explained – Like a Helpful Team at a Library:**
-Our flowchart shows the steps an AI system takes to answer your questions. Imagine you’re at a magical library where a team works together to help you:
+[This flowchart](https://drive.google.com/file/d/1-bLxq_8jfmhl4E9vJAfcxbwuzF4eN6S3/view?usp=sharing) shows the steps an AI system takes to answer your questions. Imagine you’re at a magical library where a team works together to help you:
 
 - **User input:** This is you walking up to the librarian’s desk with a question, like “Tell me about dinosaurs.”
 - **RAG (Retrieval-Augmented Generation):** The head librarian doesn’t just guess the answer. They decide if they need extra books or articles to give you the best information. They send a helper to look for these resources.

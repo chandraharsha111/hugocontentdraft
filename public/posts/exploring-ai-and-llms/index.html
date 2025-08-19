@@ -295,7 +295,6 @@
 <p>Have you ever wondered how AI chatbots can grasp your questions and reply so effectively? This guide walks you through how they work, starting with basic ideas and moving to deeper technical insights. These chatbots backed by LLM&rsquo;s processes information in a structured order, drawing on multiple sources to improve its responses. Each step below is enhanced with concepts from <a href="https://blog.bytebytego.com/p/how-llms-see-the-world?utm_source=publication-search">How LLMs see the world</a>, including in-depth details on tokens, embedding, positioning, and transformer mechanics.</p>
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
-<li><a href="#visual-overview-of-llm-processing-flow">Overview of LLM processing</a></li>
 <li><a href="#ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">Understanding AI basics</a></li>
 <li><a href="#component-spotlights-key-elements-of-the-llm-process">Core components of LLMs</a></li>
 <li><a href="#llm-landscape-comparing-leading-models">Exploring AI models and technology</a></li>
@@ -303,36 +302,11 @@
 <li><a href="#references">References</a></li>
 </ul>
 <hr>
-<h2 id="visual-overview-of-llm-processing-flow">Visual overview of LLM processing flow</h2>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
-    Input[&#34;User Input&#34;] --&gt; RAG[&#34;RAG&#34;]
-    RAG --&gt; VectorDB[&#34;Vector DB&#34;]
-    RAG --&gt; MCP[&#34;MCP Server&#34;]
-    VectorDB --&gt; LLM[&#34;LLM&#34;]
-    MCP --&gt; LLM
-    RAG --&gt; LLM
-    LLM --&gt; Output[&#34;Output&#34;]
-</code></pre><pre tabindex="0"><code class="language-dot" data-lang="dot">digraph G {
-    rankdir=TB;
-    Input [label=&#34;User Input&#34;];
-    RAG [label=&#34;RAG&#34;];
-    VectorDB [label=&#34;Vector DB&#34;];
-    MCP [label=&#34;MCP Server&#34;];
-    LLM [label=&#34;LLM&#34;];
-    Output [label=&#34;Output&#34;];
-    Input -&gt; RAG;
-    RAG -&gt; VectorDB;
-    RAG -&gt; MCP;
-    VectorDB -&gt; LLM;
-    MCP -&gt; LLM;
-    RAG -&gt; LLM;
-    LLM -&gt; Output;
-}
-</code></pre><h2 id="ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">AI made simple: Understanding the flowchart and transformers with a library analogy</h2>
+<h2 id="ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">AI made simple: Understanding the flowchart and transformers with a library analogy</h2>
 <p>This analogy provides a foundational understanding of AI processes. As we progress, we&rsquo;ll explore the technical details behind these components.</p>
 <p>Whether you&rsquo;re new to technology or just curious, understanding how intelligent language systems like chatbots or AI assistants operate can feel a bit overwhelming at first. Let&rsquo;s simplify it by breaking down the flowchart in this document and the concept of &ldquo;transformers&rdquo; (the core engine behind these systems) using relatable, everyday examples.</p>
 <p><strong>The Flow Chart Explained – Like a Helpful Team at a Library:</strong>
-Our flowchart shows the steps an AI system takes to answer your questions. Imagine you’re at a magical library where a team works together to help you:</p>
+<a href="https://drive.google.com/file/d/1-bLxq_8jfmhl4E9vJAfcxbwuzF4eN6S3/view?usp=sharing">This flowchart</a> shows the steps an AI system takes to answer your questions. Imagine you’re at a magical library where a team works together to help you:</p>
 <ul>
 <li><strong>User input:</strong> This is you walking up to the librarian’s desk with a question, like “Tell me about dinosaurs.”</li>
 <li><strong>RAG (Retrieval-Augmented Generation):</strong> The head librarian doesn’t just guess the answer. They decide if they need extra books or articles to give you the best information. They send a helper to look for these resources.</li>
@@ -668,7 +642,6 @@ The progression of Generative AI can be seen as a sequential journey from basic 
                 <nav id="TableOfContents">
   <ul>
     <li><a href="#table-of-contents">Table of contents</a></li>
-    <li><a href="#visual-overview-of-llm-processing-flow">Visual overview of LLM processing flow</a></li>
     <li><a href="#ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">AI made simple: Understanding the flowchart and transformers with a library analogy</a></li>
     <li><a href="#component-spotlights-key-elements-of-the-llm-process">Component Spotlights: Key Elements of the LLM Process</a>
       <ul>

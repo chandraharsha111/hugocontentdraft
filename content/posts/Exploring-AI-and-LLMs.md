@@ -40,7 +40,24 @@ graph TD
     LLM --> Output["Output"]
 ```
 
-![Flow Diagram](<LLM FLow diagram.png>) 
+```dot
+digraph G {
+    rankdir=TB;
+    Input [label="User Input"];
+    RAG [label="RAG"];
+    VectorDB [label="Vector DB"];
+    MCP [label="MCP Server"];
+    LLM [label="LLM"];
+    Output [label="Output"];
+    Input -> RAG;
+    RAG -> VectorDB;
+    RAG -> MCP;
+    VectorDB -> LLM;
+    MCP -> LLM;
+    RAG -> LLM;
+    LLM -> Output;
+}
+
 
 ## AI made simple: Understanding the flowchart and transformers with a library analogy
 

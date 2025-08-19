@@ -12,7 +12,10 @@ outputs:
     - "HTML"
     - "RSS"
 
-Paginate: 3
+pagination:
+  disableAliases: true
+  pagerSize: 3
+  path: page
 enableRobotsTXT: true
 # disqusShortname: your-disqus-shortname
 # googleAnalytics: G-MEASUREMENT_ID

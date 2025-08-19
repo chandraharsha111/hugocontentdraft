@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://www.chandraharsha111.com/posts/exploring-ai-and-llms/">
+  <meta property="og:site_name" content="Chandra Harsha Jupalli">
+  <meta property="og:title" content="Chandra Harsha Jupalli">
+  <meta property="og:description" content="From Input to Insight: Exploring AI and LLMs Have you ever wondered how AI chatbots can grasp your questions and reply so effectively? This guide walks you through how they work, starting with basic ideas and moving to deeper technical insights. These chatbots backed by LLM’s processes information in a structured order, drawing on multiple sources to improve its responses. Each step below is enhanced with concepts from How LLMs see the world, including in-depth details on tokens, embedding, positioning, and transformer mechanics.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-19T17:22:50-04:00">
+    <meta property="article:modified_time" content="2025-08-19T17:22:50-04:00">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Chandra Harsha Jupalli">
+  <meta name="twitter:description" content="From Input to Insight: Exploring AI and LLMs Have you ever wondered how AI chatbots can grasp your questions and reply so effectively? This guide walks you through how they work, starting with basic ideas and moving to deeper technical insights. These chatbots backed by LLM’s processes information in a structured order, drawing on multiple sources to improve its responses. Each step below is enhanced with concepts from How LLMs see the world, including in-depth details on tokens, embedding, positioning, and transformer mechanics.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+ | Chandra Harsha Jupalli
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Chandra Harsha Jupalli
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">
+                            Professional Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog Posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4"></h1>
+            <div class="text-center">
+               
+              <small>|</small>
+              Aug 19, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h1 id="from-input-to-insight-exploring-ai-and-llms">From Input to Insight: Exploring AI and LLMs</h1>
+  <!-- Inside AI Magic: Understanding LLM Processing -->
+<p>Have you ever wondered how AI chatbots can grasp your questions and reply so effectively? This guide walks you through how they work, starting with basic ideas and moving to deeper technical insights. These chatbots backed by LLM&rsquo;s processes information in a structured order, drawing on multiple sources to improve its responses. Each step below is enhanced with concepts from <a href="https://blog.bytebytego.com/p/how-llms-see-the-world?utm_source=publication-search">How LLMs see the world</a>, including in-depth details on tokens, embedding, positioning, and transformer mechanics.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#visual-overview-of-llm-processing-flow">Overview of LLM processing</a></li>
+<li><a href="#ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">Understanding AI basics</a></li>
+<li><a href="#component-spotlights-key-elements-of-the-llm-process">Core components of LLMs</a></li>
+<li><a href="#llm-landscape-comparing-leading-models">Exploring AI models and technology</a></li>
+<li><a href="#agentic-systems-and-automated-workflows">Agentic AI and workflows</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<hr>
+<h2 id="visual-overview-of-llm-processing-flow">Visual overview of LLM processing flow</h2>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    Input[&#34;User Input&#34;] --&gt; RAG[&#34;RAG&#34;]
+    RAG --&gt; VectorDB[&#34;Vector DB&#34;]
+    RAG --&gt; MCP[&#34;MCP Server&#34;]
+    VectorDB --&gt; LLM[&#34;LLM&#34;]
+    MCP --&gt; LLM
+    RAG --&gt; LLM
+    LLM --&gt; Output[&#34;Output&#34;]
+</code></pre><h2 id="ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">AI made simple: Understanding the flowchart and transformers with a library analogy</h2>
+<p>This analogy provides a foundational understanding of AI processes. As we progress, we&rsquo;ll explore the technical details behind these components.</p>
+<p>Whether you&rsquo;re new to technology or just curious, understanding how intelligent language systems like chatbots or AI assistants operate can feel a bit overwhelming at first. Let&rsquo;s simplify it by breaking down the flowchart in this document and the concept of &ldquo;transformers&rdquo; (the core engine behind these systems) using relatable, everyday examples.</p>
+<p><strong>The Flow Chart Explained – Like a Helpful Team at a Library:</strong>
+Our flowchart shows the steps an AI system takes to answer your questions. Imagine you’re at a magical library where a team works together to help you:</p>
+<ul>
+<li><strong>User input:</strong> This is you walking up to the librarian’s desk with a question, like “Tell me about dinosaurs.”</li>
+<li><strong>RAG (Retrieval-Augmented Generation):</strong> The head librarian doesn’t just guess the answer. They decide if they need extra books or articles to give you the best information. They send a helper to look for these resources.</li>
+<li><strong>Vector DB (Database):</strong> This is like a super-organized shelf of books and notes where everything is sorted by topics, not just titles. The helper quickly finds books about dinosaurs by matching the “idea” of your question to the right resources, even if you didn’t use the exact words.</li>
+<li><strong>MCP Server:</strong> Sometimes, the librarian calls a special expert—like a paleontologist—for up-to-date or unique facts about dinosaurs that aren’t in the library books.</li>
+<li><strong>LLM (Large Language Model):</strong> Now, the head librarian gathers all the information—from their own memory, the books, and the expert—and carefully thinks about how to explain it. They craft a clear story or answer about dinosaurs.</li>
+<li><strong>Output:</strong> Finally, the librarian shares the answer in simple words, making it easy to understand, like “Dinosaurs were huge creatures that lived millions of years ago…”</li>
+</ul>
+<p>The arrows in the flowchart show how information moves from you, through the team, and back with an answer. The whole team collaborates to ensure the answer is thorough and accurate.</p>
+<p><strong>How Transformers Work – Continuing the Library Analogy:</strong>
+Transformers are the “thinking engine” inside the LLM part of our flowchart. They’re not a physical thing but a clever way the computer learns to understand and create language. Building on our library analogy, let’s see how a master librarian within this magical library expertly processes every detail of your question to craft the perfect response.</p>
+<ul>
+<li><strong>Cataloging words:</strong> When you ask a question, the master librarian breaks it down into individual pieces (like words) and organizes each piece into a detailed catalog card that holds its meaning.</li>
+<li><strong>Tracking the order:</strong> They also note the order of these pieces (knowing “dog chases cat” differs from “cat chases dog”) by labeling each card with its position in the sequence.</li>
+<li><strong>Linking ideas:</strong> The librarian examines every catalog card and connects related ideas, no matter how far apart they are. For example, in “The big dog barked,” they link “big” to “dog” to clarify it’s not a small dog, ignoring unrelated words in between.</li>
+<li><strong>Analyzing from multiple angles:</strong> They review the question from different perspectives simultaneously—one for overall meaning, another for how words connect—ensuring no detail is overlooked.</li>
+<li><strong>Crafting the response:</strong> Piece by piece, the librarian builds the answer, always checking the full set of cards to make sure each new word fits perfectly, like assembling a puzzle with precision.</li>
+<li><strong>Delivering the answer:</strong> Finally, they put all the pieces together into a clear, well-organized response and share it with you in simple terms.</li>
+</ul>
+<p>This library magic happens incredibly fast inside the computer, allowing it to chat with you, write content, or answer nearly any question by understanding language in a human-like way. That’s the power of transformers—they enable AI to communicate with us naturally.</p>
+<p>Now that we&rsquo;ve covered the basics, let&rsquo;s dive deeper into the technical components that power the LLM process. Think of these as the behind-the-scenes machinery in our magical library, working together to answer your questions with precision.</p>
+<hr>
+<h2 id="component-spotlights-key-elements-of-the-llm-process">Component Spotlights: Key Elements of the LLM Process</h2>
+<h3 id="user-input">User Input</h3>
+<p>Users interact with the LLM by providing prompts in natural language.</p>
+<ul>
+<li><strong>Tokenization</strong>: The system breaks the input into <em>tokens</em>, mapping words, subwords, or characters to unique integers. This is essential, as LLMs can only work with numbers, not raw text.</li>
+<li><strong>Example</strong>: The phrase &ldquo;LLMs are amazing!&rdquo; could be tokenized as [18472, 44, 3256, 29991].</li>
+<li><strong>Purpose</strong>: These token IDs are then used as the starting point of the deep learning process.</li>
+</ul>
+<h3 id="rag-retrieval-augmented-generation">RAG (Retrieval-Augmented Generation)</h3>
+<p>When extra knowledge is needed beyond the LLM&rsquo;s training, <em>RAG</em> augments the prompt:</p>
+<ul>
+<li><strong>Embedding the query</strong>: The user’s tokenized input is transformed into dense <em>vectors</em> (<em>embeddings</em>) that encapsulate semantic meaning.</li>
+<li><strong>Semantic retrieval</strong>: The embedding is used to semantically match relevant documents or facts from large knowledge stores, not just by word overlap but by meaning.</li>
+<li><strong>Context addition</strong>: The retrieved knowledge snippets are tokenized and embedded, then added to the context for the LLM to use during reasoning.</li>
+</ul>
+<h3 id="vector-db">Vector DB</h3>
+<p>The <em>vector database</em> powers semantic search:</p>
+<ul>
+<li><strong>Storing embeddings</strong>: It contains vast collections of knowledge, each item pre-embedded into <em>vectors</em>.</li>
+<li><strong>Similarity search</strong>: When a query comes in, it is embedded and the DB rapidly finds vectors (documents/facts) that are closest in meaning to the query.</li>
+<li><strong>Contextual injection</strong>: The most relevant chunks are provided as <em>tokens</em> and <em>embeddings</em> for the LLM to attend to.</li>
+</ul>
+<h3 id="mcp-server">MCP Server</h3>
+<p>For live, dynamic, or specialized data, the system calls the <em>MCP Server</em>:</p>
+<ul>
+<li><strong>Access provision</strong>: Provides access to tools (<em>APIs</em>, calculators, real-time data sources) or proprietary datasets not within the standard training or vector DB.</li>
+<li><strong>Data processing</strong>: These results are processed—tokenized and embedded—and then injected into the token stream/context considered by the LLM, offering real-time augmentation.</li>
+</ul>
+<h3 id="llm-large-language-model">LLM (Large Language Model)</h3>
+<p>The heart of the system runs on <em>transformer architecture</em>:</p>
+<ul>
+<li><strong>Embeddings</strong>: All tokens from user input, contextual passages (RAG/VectorDB), and MCP tools are turned into <em>embeddings</em>—numerical vectors that encapsulate meaning.</li>
+<li><strong>Positional encoding</strong>: Since transformers process input in parallel and are position-agnostic by nature, <em>positional encodings</em> are added to preserve the order of tokens, so the model knows &ldquo;who came before whom&rdquo;.</li>
+<li><strong>Transformer attention</strong>: Core innovation—<em>attention mechanisms</em> let the model weigh and relate every token in the sequence to every other for each new output token, identifying which facts or passages are most relevant at every step.</li>
+<li><strong>Autoregressive generation</strong>: At each inference step, the LLM predicts the next token based on all previously seen tokens and context—building up the output, token by token.</li>
+<li><strong>Chain of Thought (CoT) prompting</strong>: A technique called <em>Chain of Thought prompting</em> can be applied within this processing stage. CoT involves structuring the input prompt or guiding the model to articulate its reasoning process step-by-step before providing a final answer. This method is particularly useful for complex tasks requiring logical deduction, mathematical reasoning, or multi-step problem-solving.
+<ul>
+<li><strong>Example</strong>: When faced with a math problem, the model might be prompted to &ldquo;think aloud&rdquo; by breaking down the problem into smaller parts, solving each part, and then combining the results.</li>
+<li><strong>Benefit</strong>: CoT enhances transparency and often improves accuracy by mimicking human-like reasoning patterns. It is typically integrated during the input formulation (as part of the User Input stage) or as a strategy within the LLM&rsquo;s internal processing to structure the generation of tokens in a logical sequence.</li>
+</ul>
+</li>
+</ul>
+<h3 id="output">Output</h3>
+<p>The LLM produces its final prediction:</p>
+<ul>
+<li><strong>Outcome</strong>: The result is a sequence of predicted <em>tokens</em>, which are then mapped back to human-readable text via <em>detokenization</em>.</li>
+<li><strong>Impact</strong>: This process empowers LLMs to generate highly contextual, relevant, and coherent responses—grounded in user input, retrieved/contextual documents, external knowledge, and deep language modeling.</li>
+</ul>
+<hr>
+<h2 id="llm-landscape-comparing-leading-models">LLM landscape: Comparing leading models</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Creator</th>
+          <th>Number of Parameters</th>
+          <th>Key Characteristics / Strengths</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GPT-3</td>
+          <td>OpenAI</td>
+          <td>175B</td>
+          <td>General-purpose, pioneered language generation at scale.</td>
+      </tr>
+      <tr>
+          <td>GPT-4</td>
+          <td>OpenAI</td>
+          <td>~1T (est. 500B+)</td>
+          <td>Multimodal (text/image), improved accuracy, creative, steerable.</td>
+      </tr>
+      <tr>
+          <td>PaLM 2</td>
+          <td>Google</td>
+          <td>340B</td>
+          <td>Excels in logic, coding, multilingual understanding.</td>
+      </tr>
+      <tr>
+          <td>Gemini (Pro/Ultra)</td>
+          <td>Google</td>
+          <td>Up to ~1.56T (Ultra)**</td>
+          <td>Multimodal, advanced reasoning and search integration.</td>
+      </tr>
+      <tr>
+          <td>LLaMA 2</td>
+          <td>Meta (Facebook)</td>
+          <td>7B – 70B</td>
+          <td>Fast, open, efficient, widely used for research and customization.</td>
+      </tr>
+      <tr>
+          <td>Claude 2/Opus</td>
+          <td>Anthropic</td>
+          <td>~52B+ (Claude 2), ? Opus</td>
+          <td>Aligned for safety, very long context windows (200k+ tokens).</td>
+      </tr>
+      <tr>
+          <td>Falcon</td>
+          <td>TII (Abu Dhabi)</td>
+          <td>40B – 180B</td>
+          <td>Open-source, highly efficient, strong at benchmarks.</td>
+      </tr>
+      <tr>
+          <td>MPT</td>
+          <td>MosaicML</td>
+          <td>7B – 30B</td>
+          <td>Modular, commercial-use, stable for production.</td>
+      </tr>
+      <tr>
+          <td>BLOOM</td>
+          <td>BigScience org.</td>
+          <td>176B</td>
+          <td>Multilingual, collaborative open-science.</td>
+      </tr>
+      <tr>
+          <td>Perplexity LLM/PPLX</td>
+          <td>Perplexity AI</td>
+          <td>70B (“PPLX-70B”)</td>
+          <td>Open-source, strong for web-augmented QA and fast API search.</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Note</strong>: Some parameter numbers for new or proprietary models, such as Gemini and Claude Opus, are estimates from public reporting or have not been fully disclosed.</p>
+<ul>
+<li>GPT-3/4 (OpenAI): Lead in general-purpose performance, creativity, and ecosystem support.</li>
+<li>PaLM 2 &amp; Gemini (Google): Advanced logic, coding, real-time and search grounding.</li>
+<li>LLaMA 2 (Meta): Efficient, easy to fine-tune, widely adopted.</li>
+<li>Claude 2/Opus (Anthropic): Long context handling, safety and truthful dialogue focus.</li>
+<li>Falcon (TII): Efficient and accessible for research/production.</li>
+<li>MPT (MosaicML): Modular, stable, business-friendly licensing and support.</li>
+<li>BLOOM (BigScience): Open, multilingual, global collaborative model.</li>
+<li>Perplexity LLM: QA-focused, practical for information retrieval, lightweight, strong for web search tasks.</li>
+</ul>
+<hr>
+<h2 id="deep-dive-how-transformer-architecture-powers-ai">Deep dive: How transformer architecture powers AI</h2>
+<p>Transformers are the foundation of modern LLMs, introduced in the seminal paper <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention is All You Need (2017)</a>. They revolutionized natural language processing by replacing sequential processing (like in older models such as Recurrent Neural Networks (RNNs) or Long Short-Term Memory networks (LSTMs)) with <strong>parallel processing</strong>, leveraging <strong>attention mechanisms</strong> to model relationships between words, no matter how far apart they are in a sentence. This section expands on concepts from <a href="https://blog.bytebytego.com/i/163736711/how-transformers-architecture-works">&ldquo;How Transformers Architecture Works&rdquo;</a> to provide a deeper understanding.</p>
+<p><strong>Core Structure and Workflow:</strong>
+Transformers consist of an <em>Encoder</em> and a <em>Decoder</em>, each made up of multiple layers. The encoder processes the input sequence, while the decoder generates the output sequence. In many LLMs, especially <em>autoregressive models</em> like GPT, often only the decoder part is used for tasks like text generation.</p>
+<ul>
+<li><strong>Token embeddings</strong>: Each input <em>token</em> (word or subword) is converted into a high-dimensional vector (e.g., 512 or 768 dimensions) that captures its semantic meaning. Think of this as translating words into a &ldquo;language&rdquo; of numbers that a computer can understand.</li>
+<li><strong>Positional encoding</strong>: Since transformers process all tokens simultaneously (not sequentially), they add <em>positional information</em> to embeddings to indicate the order of words in a sentence. This can be a fixed sinusoidal function or learned during training, ensuring the model knows &ldquo;where&rdquo; each token is in the sequence.</li>
+<li><strong>Self-attention mechanism</strong>: The heart of transformers, <em>self-attention</em> allows each token to &ldquo;look at&rdquo; every other token in the input to determine its relevance.
+<ul>
+<li><strong>Example</strong>: In the sentence &ldquo;The cat, which is black, sat on the mat,&rdquo; the word &ldquo;cat&rdquo; pays high attention to &ldquo;black&rdquo; and &ldquo;sat&rdquo; despite their distance.</li>
+<li><strong>Method</strong>: This is computed using <em>Query</em>, <em>Key</em>, and <em>Value</em> matrices derived from the embeddings.</li>
+</ul>
+</li>
+<li><strong>Multi-head attention</strong>: Instead of a single attention mechanism, transformers use multiple &ldquo;<em>heads</em>&rdquo; (e.g., 8 or 12) to capture different types of relationships.
+<ul>
+<li>One head might focus on nearby words (<em>syntax</em>), another on distant words (<em>semantics</em>), providing a richer understanding of context.</li>
+</ul>
+</li>
+<li><strong>Feed-forward neural networks (FFNNs)</strong>: After attention, each token&rsquo;s representation passes through a small <em>neural network</em> (specific to its position) to further transform and refine the data. This introduces non-linearity and helps the model learn complex patterns.</li>
+<li><strong>Layer normalization and residual connections</strong>: Each sub-layer (attention or FFNN) is followed by <em>normalization</em> to stabilize training and <em>residual connections</em> (adding the input back to the output) to help gradients flow through deep networks, preventing vanishing gradient issues.</li>
+<li><strong>Stacking layers</strong>: A transformer typically has multiple encoder/decoder <em>layers</em> (e.g., 6 to 96), each repeating attention and FFNN steps. Deeper layers capture increasingly abstract features, from local word relationships to global sentence meaning.</li>
+<li><strong>Output prediction (Softmax layer)</strong>: For generation tasks, the final decoder layer outputs a <em>probability distribution</em> over the vocabulary for the next token. The token with the highest probability is chosen (or sampled), and the process repeats <em>autoregressively</em> until the output is complete.</li>
+</ul>
+<p><strong>Analogy for Understanding:</strong>
+Imagine a transformer as a highly efficient librarian team:</p>
+<ul>
+<li><strong>Token embeddings</strong> are like translating each word of your question into a detailed index card.</li>
+<li><strong>Positional encoding</strong> marks each card with its position in your sentence, so order isn&rsquo;t lost.</li>
+<li><strong>Self-attention</strong> is the team cross-referencing every card with every other to see which ideas connect most strongly, no matter how far apart.</li>
+<li><strong>Multi-head attention</strong> means different librarians focus on different connections (one on grammar, another on meaning).</li>
+<li><strong>Feed-forward layers</strong> are like each librarian refining their notes before passing them on.</li>
+<li><strong>Stacking layers</strong> is passing these notes through multiple teams, each adding deeper insight.</li>
+<li>Finally, <strong>Output prediction</strong> is the head librarian writing the best next word based on all insights, continuing until the answer is complete.</li>
+</ul>
+<p><strong>Summary Table:</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Concept</th>
+          <th>What it Does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Token Embedding</td>
+          <td>Converts text/tokens to numerical vectors for model input</td>
+      </tr>
+      <tr>
+          <td>Positional Encoding</td>
+          <td>Encodes word order to preserve sequence context</td>
+      </tr>
+      <tr>
+          <td>Self-Attention</td>
+          <td>Links each token to all others based on relevance</td>
+      </tr>
+      <tr>
+          <td>Multi-Head Attention</td>
+          <td>Captures multiple relationship types via parallel attention</td>
+      </tr>
+      <tr>
+          <td>Feed-Forward Layer</td>
+          <td>Refines each token’s representation with non-linear changes</td>
+      </tr>
+      <tr>
+          <td>Layer Normalization</td>
+          <td>Stabilizes training by normalizing layer outputs</td>
+      </tr>
+      <tr>
+          <td>Residual Connections</td>
+          <td>Adds input to output to help training deep networks</td>
+      </tr>
+      <tr>
+          <td>Layer Stacking</td>
+          <td>Builds depth for complex understanding across many layers</td>
+      </tr>
+      <tr>
+          <td>Output Prediction</td>
+          <td>Computes the next token/word for human-like language output</td>
+      </tr>
+  </tbody>
+</table>
+<p>Transformers’ ability to parallelize processing, scale to billions of parameters, and focus on contextual relationships through attention makes them exceptionally powerful for language understanding and generation, powering today’s most advanced LLMs.</p>
+<p><strong>Key Takeaway</strong>: Transformers are the heart of modern AI language systems, enabling them to understand context and generate human-like responses by processing words in parallel and focusing on what matters most in a sentence.</p>
+<hr>
+<h2 id="agentic-systems-and-automated-workflows">Agentic systems and automated workflows</h2>
+<p>As Generative AI continues to evolve, two significant advancements—Automated Workflows and Agentic AI—have emerged, pushing the boundaries of what AI systems can achieve. These developments represent a shift from passive response generation to proactive, autonomous, and systematic interaction with users and environments, reflecting a sequential progression in AI capabilities.</p>
+<p><strong>Automated workflows: Streamlining processes with AI</strong>
+Automated Workflows represent an early yet powerful step in embedding AI into structured, repeatable processes to boost efficiency across various fields. This innovation automates tasks that once needed human oversight, evolving from basic rule-based systems to leveraging AI&rsquo;s generative and reasoning strengths. Key aspects include:</p>
+<ul>
+<li><strong>Task automation</strong>:
+<ul>
+<li>Early workflows handled simple tasks like scheduling or data entry.</li>
+<li>With AI, they now draft documents, generate reports, or create content using predefined templates or triggers, minimizing manual work.</li>
+<li>Example: A workflow can auto-generate a monthly sales report by pulling data (via MCP Server or Vector DB), analyzing it with the LLM, and formatting the output.</li>
+</ul>
+</li>
+<li><strong>Decision support</strong>:
+<ul>
+<li>These workflows embed decision-making logic, using AI to assess options and propose actions.</li>
+<li>They align with the &ldquo;RAG&rdquo; and &ldquo;LLM&rdquo; stages of our flowchart, retrieving and processing external data to guide decisions.</li>
+</ul>
+</li>
+<li><strong>Integration with systems</strong>:
+<ul>
+<li>Workflows link AI with business tools (like CRMs, ERPs) to manage complete processes.</li>
+<li>Example: Resolving customer support tickets by handling user input, fetching relevant data, crafting a response, and updating the system.</li>
+</ul>
+</li>
+</ul>
+<p>Automated Workflows mark a crucial evolution, shifting AI from standalone tasks to systemic integration, becoming a vital component of operational pipelines and enhancing productivity and consistency.</p>
+<p><strong>Agentic AI: Autonomous decision-making agents</strong>
+Building on automated systems, Agentic AI marks a cutting-edge advancement where AI operates as autonomous agents, making decisions, taking actions, and pursuing goals with minimal human input. Unlike traditional Generative AI or automated workflows that react to predefined triggers, Agentic AI stands out with its proactive nature. Key capabilities include:</p>
+<ul>
+<li><strong>Set goals and plan</strong>:
+<ul>
+<li>These systems define objectives based on user input or environmental context.</li>
+<li>They craft step-by-step plans to achieve goals independently.</li>
+<li>Example: An Agentic AI could plan a travel itinerary by researching destinations, booking flights, and suggesting activities—all without needing detailed human guidance.</li>
+</ul>
+</li>
+<li><strong>Interact with tools and environments</strong>:
+<ul>
+<li>Agentic AI connects with external tools, APIs, and systems (similar to the MCP Server in our workflow).</li>
+<li>It performs tasks like sending emails, updating databases, or controlling smart devices.</li>
+</ul>
+</li>
+<li><strong>Adapt and learn</strong>:
+<ul>
+<li>Through ongoing interaction and feedback, it refines strategies.</li>
+<li>It learns from successes and setbacks to enhance future performance.</li>
+</ul>
+</li>
+</ul>
+<p>Within our flowchart, Agentic AI goes beyond the &ldquo;LLM&rdquo; and &ldquo;Output&rdquo; stages, looping back to &ldquo;User Input&rdquo; or other components as needed to handle multi-step tasks autonomously. This evolution transforms AI from a mere responder or workflow element into a proactive partner, adept at managing complex, multi-turn interactions or projects.</p>
+<p><strong>Evolution of Generative AI with Automated Workflows and Agentic AI</strong>
+The progression of Generative AI can be seen as a sequential journey from basic automation and text generation to sophisticated, goal-oriented, and autonomous systems:</p>
+<ul>
+<li><strong>Early Stage - Automation and Basic Tools:</strong> Before advanced AI, automation relied on rule-based systems and simple scripts for repetitive tasks, setting the stage for integrating intelligence into workflows.</li>
+<li><strong>Content Generation with Generative AI:</strong> Early Generative AI models, such as GPT-2, focused on producing text or media based on prompts, mainly operating at the &ldquo;LLM&rdquo; and &ldquo;Output&rdquo; stages of our workflow.</li>
+<li><strong>Contextual Enhancement:</strong> With techniques like RAG and Vector DB, AI evolved to incorporate external knowledge, making responses more informed and relevant—a significant step in handling real-world queries.</li>
+<li><strong>Systemic Integration (Automated Workflows):</strong> Automated Workflows integrate Generative AI into broader operational frameworks, automating multi-step processes and linking all parts of our flowchart (from Input to Output) into streamlined, efficient systems, building on earlier automation concepts.</li>
+<li><strong>Autonomous Interaction (Agentic AI):</strong> The emergence of Agentic AI represents a significant shift towards autonomy, where AI systems proactively manage tasks, make decisions, and interact with environments, transforming the traditional workflow into adaptive, self-directed cycles.</li>
+</ul>
+<p>Together, Automated Workflows and Agentic AI represent critical milestones in the evolution of Generative AI, transforming it from a tool for creation into a partner for action and automation. They build on the foundational capabilities of LLMs, enhancing their practical utility in personal, professional, and industrial contexts, with workflows providing the structure and Agentic AI adding the autonomy.</p>
+<hr>
+<h2 id="conclusion-exploring-ais-impact">Conclusion: Exploring AI&rsquo;s impact</h2>
+<p>As you&rsquo;ve seen, the journey of an LLM from understanding your input to crafting a response is a complex yet fascinating process. These systems are transforming how we interact with technology, from personal assistants to professional tools.</p>
+<h2 id="glossary-of-key-terms">Glossary of key terms</h2>
+<p>To help clarify some of the technical concepts discussed, here are brief definitions of important terms used throughout this document:</p>
+<ul>
+<li><strong>Tokenization</strong>: The process of breaking down text into smaller units (tokens, like words or subwords) and converting them into numbers for the AI to process.</li>
+<li><strong>Embeddings</strong>: Numerical representations of words or phrases that capture their meaning, allowing AI to understand relationships between them.</li>
+<li><strong>Positional Encoding</strong>: A method to add information about the order of words in a sentence, since transformers process all words simultaneously and need to know their sequence.</li>
+<li><strong>Self-Attention</strong>: A mechanism that lets the AI focus on relevant words in a sentence by weighing their importance to each other, regardless of their position.</li>
+<li><strong>Autoregressive Generation</strong>: A technique where the AI predicts the next word (or token) based on all previously generated words, building sentences step by step.</li>
+<li><strong>RAG (Retrieval-Augmented Generation)</strong>: A method where AI retrieves relevant external information to enhance its responses beyond its trained knowledge.</li>
+</ul>
+<h2 id="references">References</h2>
+<p>This document draws inspiration and technical insights from the following sources:</p>
+<ul>
+<li><a href="https://blog.bytebytego.com/p/how-llms-see-the-world?utm_source=publication-search">How LLMs see the world</a> - Provides detailed explanations on tokens, embeddings, positioning, and transformer mechanics.</li>
+<li><a href="https://blog.bytebytego.com/i/163736711/how-transformers-architecture-works">How Transformers Architecture Works</a> - Offers an in-depth look at the transformer architecture that powers modern LLMs.</li>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention is All You Need (2017)</a> - Introduces the transformer model and attention mechanisms fundamental to modern LLMs.</li>
+</ul>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#table-of-contents">Table of contents</a></li>
+    <li><a href="#visual-overview-of-llm-processing-flow">Visual overview of LLM processing flow</a></li>
+    <li><a href="#ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">AI made simple: Understanding the flowchart and transformers with a library analogy</a></li>
+    <li><a href="#component-spotlights-key-elements-of-the-llm-process">Component Spotlights: Key Elements of the LLM Process</a>
+      <ul>
+        <li><a href="#user-input">User Input</a></li>
+        <li><a href="#rag-retrieval-augmented-generation">RAG (Retrieval-Augmented Generation)</a></li>
+        <li><a href="#vector-db">Vector DB</a></li>
+        <li><a href="#mcp-server">MCP Server</a></li>
+        <li><a href="#llm-large-language-model">LLM (Large Language Model)</a></li>
+        <li><a href="#output">Output</a></li>
+      </ul>
+    </li>
+    <li><a href="#llm-landscape-comparing-leading-models">LLM landscape: Comparing leading models</a></li>
+    <li><a href="#deep-dive-how-transformer-architecture-powers-ai">Deep dive: How transformer architecture powers AI</a></li>
+    <li><a href="#agentic-systems-and-automated-workflows">Agentic systems and automated workflows</a></li>
+    <li><a href="#conclusion-exploring-ais-impact">Conclusion: Exploring AI&rsquo;s impact</a></li>
+    <li><a href="#glossary-of-key-terms">Glossary of key terms</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=&url=https%3a%2f%2fwww.chandraharsha111.com%2fposts%2fexploring-ai-and-llms%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=: https%3a%2f%2fwww.chandraharsha111.com%2fposts%2fexploring-ai-and-llms%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=&amp;body=Check%20out%20this%20site https%3a%2f%2fwww.chandraharsha111.com%2fposts%2fexploring-ai-and-llms%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/exploring-ai-and-llms/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title=""></h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h1 id="from-input-to-insight-exploring-ai-and-llms">From Input to Insight: Exploring AI and LLMs</h1>
+  <!-- Inside AI Magic: Understanding LLM Processing -->
+<p>Have you ever wondered how AI chatbots can grasp your questions and reply so effectively? This guide walks you through how they work, starting with basic ideas and moving to deeper technical insights. These chatbots backed by LLM&rsquo;s processes …</p></!--></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 19, 2025</span>
+                    <a href="/posts/exploring-ai-and-llms/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/software-development-resources/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Software Development Resources">Software Development …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h1 id="blogs-and-websites">Blogs and Websites</h1>
+<ul>
+<li><a href="https://jimfawcett.github.io/JimFawcett.html">Dr Fawcett</a></li>
+<li><a href="http://www.cis.syr.edu/~wedu/">Dr KevinDu</a></li>
+<li><a href="http://cleancoder.com/products">Bob Martin</a></li>
+<li><a href="https://martinfowler.com/">Martin Flower</a></li>
+</ul>
+<h1 id="basic-introduction-videos">Basic Introduction Videos</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=FZR0rG3HKIk&amp;list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ&amp;index=7">Virtualization</a></li>
+<li><a href="https://www.youtube.com/watch?v=2vMEQ5zs1ko">Kubernetes Vs Docker</a></li>
+<li><a href="https://www.youtube.com/watch?v=cjXI-yxqGTI&amp;list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ">Containers Vs VM</a></li>
+<li><a href="https://www.youtube.com/watch?v=CdBtNQZH8a4">Microservices</a></li>
+<li><a href="https://www.youtube.com/watch?v=fp9_ubiKqFU&amp;list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ&amp;index=5">Cloud Native</a></li>
+<li><a href="https://www.youtube.com/watch?v=HRfR4dJoKDc&amp;list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ&amp;index=14">Big data</a></li>
+<li><a href="https://www.youtube.com/watch?v=HRfR4dJoKDc&amp;list=PLOspHqNVtKAC-_ZAGresP-i0okHe5FjcJ&amp;index=14">Kafka</a></li>
+<li><a href="https://www.youtube.com/watch?v=fy8SHvNZGeE">Helm</a></li>
+<li><a href="https://www.youtube.com/watch?v=1er2cjUq1UI&amp;list=RDCMUCKWaEZ-_VweaEx1j62do_vQ&amp;start_radio=1&amp;t=6">Continuous Integration</a></li>
+</ul>
+<h1 id="technologies">Technologies</h1>
+<ul>
+<li><a href="https://dzone.com/articles/top-20-git-commands-with-examples">Git commands</a></li>
+<li><a href="https://swagger.io/solutions/getting-started-with-oas/">API best practices</a></li>
+<li><a href="https://swagger.io/docs/specification/about/">Swagger</a></li>
+<li><a href="https://www.jenkins.io/doc/book/pipeline/">Jenkins</a></li>
+<li><a href="https://dzone.com/articles/aws-basics">aws-basics-dzone …</a></li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 28, 2022</span>
+                    <a href="/posts/software-development-resources/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/intesting-investing-resources/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Random Interests">Random Interests</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h1 id="books">Books</h1>
+<h3 id="investing">Investing</h3>
+<ul>
+<li><a href="https://www.amazon.com/One-Up-Wall-Street-Already/dp/0743200403">One up on WallStreet</a></li>
+<li><a href="https://www.amazon.com/Beating-Street-Peter-Lynch/dp/0671891634">Beating the street</a></li>
+<li><a href="https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661">Intelligent Investor</a></li>
+<li><a href="https://www.amazon.com/Common-Stocks-Uncommon-Profits-Writings/dp/0471445509">Common Stocks and Uncommon Profits</a></li>
+<li><a href="https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021">Principles RayDalio</a></li>
+<li><a href="https://www.amazon.com/Business-Adventures-Twelve-Classic-Street/dp/1497644895">Business Adventures</a></li>
+<li><a href="https://www.amazon.com/Dhandho-Investor-Low-Risk-Method-Returns/dp/047004389X">Dhandho Investor</a></li>
+<li><a href="https://www.amazon.com/Buffett-American-Capitalist-Roger-Lowenstein/dp/0812979273">Making of American Capitalist</a></li>
+<li><a href="https://www.amazon.com/Payback-Time-Making-Money-Revenge/dp/0307461866">Payback time</a></li>
+<li><a href="https://www.amazon.com/Invested-Warren-Buffett-Charlie-Emotions/dp/0062672657">Invested</a></li>
+<li><a href="https://www.amazon.com/Random-Walk-Down-Wall-Street/dp/0393330338">Random Walk down Wall Street</a></li>
+<li><a href="https://www.amazon.com/Little-Book-Common-Sense-Investing/dp/0470102101">Little book of common sense Investing</a></li>
+<li><a href="https://www.amazon.com/Wealth-Nations-Adam-Smith/dp/1505577128">Wealth of …</a></li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Oct 27, 2021</span>
+                    <a href="/posts/intesting-investing-resources/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <a href="https://twitter.com" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#03a9f4"
+                d="M42,37c0,2.762-2.239,5-5,5H11c-2.762,0-5-2.238-5-5V11c0-2.762,2.238-5,5-5h26c2.761,0,5,2.238,5,5 V37z" />
+            <path fill="#fff"
+                d="M36,17.12c-0.882,0.391-1.999,0.758-3,0.88c1.018-0.604,2.633-1.862,3-3 c-0.951,0.559-2.671,1.156-3.793,1.372C31.311,15.422,30.033,15,28.617,15C25.897,15,24,17.305,24,20v2c-4,0-7.9-3.047-10.327-6 c-0.427,0.721-0.667,1.565-0.667,2.457c0,1.819,1.671,3.665,2.994,4.543c-0.807-0.025-2.335-0.641-3-1c0,0.016,0,0.036,0,0.057 c0,2.367,1.661,3.974,3.912,4.422C16.501,26.592,16,27,14.072,27c0.626,1.935,3.773,2.958,5.928,3c-1.686,1.307-4.692,2-7,2 c-0.399,0-0.615,0.022-1-0.023C14.178,33.357,17.22,34,20,34c9.057,0,14-6.918,14-13.37c0-0.212-0.007-0.922-0.018-1.13 C34.95,18.818,35.342,18.104,36,17.12" />
+        </svg>
+    </a>
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://www.chandraharsha111.com/" title="Chandra Harsha Jupalli">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/contact.js"></script>
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

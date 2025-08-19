@@ -57,6 +57,7 @@ digraph G {
     RAG -> LLM;
     LLM -> Output;
 }
+```
 
 
 ## AI made simple: Understanding the flowchart and transformers with a library analogy

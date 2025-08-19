@@ -14,7 +14,7 @@ outputs:
 
 pagination:
   disableAliases: true
-  pagerSize: 3
+  pagerSize: 5
   path: page
 enableRobotsTXT: true
 # disqusShortname: your-disqus-shortname

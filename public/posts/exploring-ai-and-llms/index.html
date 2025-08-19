@@ -304,20 +304,15 @@
 </ul>
 <hr>
 <h2 id="visual-overview-of-llm-processing-flow">Visual overview of LLM processing flow</h2>
-<!-- 
-```
-Note replaced two dashes to one dash -> as a work around 
-graph TD
-    Input["User Input"] -> RAG["RAG"]
-    RAG -> VectorDB["Vector DB"]
-    RAG -> MCP["MCP Server"]
-    VectorDB -> LLM["LLM"]
-    MCP -> LLM
-    RAG -> LLM
-    LLM -> Output["Output"]
-```
--->
-<p><img src="LLM%20FLow%20diagram.png" alt="Flow Diagram"></p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    Input[&#34;User Input&#34;] --&gt; RAG[&#34;RAG&#34;]
+    RAG --&gt; VectorDB[&#34;Vector DB&#34;]
+    RAG --&gt; MCP[&#34;MCP Server&#34;]
+    VectorDB --&gt; LLM[&#34;LLM&#34;]
+    MCP --&gt; LLM
+    RAG --&gt; LLM
+    LLM --&gt; Output[&#34;Output&#34;]
+</code></pre><p><img src="LLM%20FLow%20diagram.png" alt="Flow Diagram"></p>
 <h2 id="ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy">AI made simple: Understanding the flowchart and transformers with a library analogy</h2>
 <p>This analogy provides a foundational understanding of AI processes. As we progress, we&rsquo;ll explore the technical details behind these components.</p>
 <p>Whether you&rsquo;re new to technology or just curious, understanding how intelligent language systems like chatbots or AI assistants operate can feel a bit overwhelming at first. Let&rsquo;s simplify it by breaking down the flowchart in this document and the concept of &ldquo;transformers&rdquo; (the core engine behind these systems) using relatable, everyday examples.</p>

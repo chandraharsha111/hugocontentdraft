@@ -29,19 +29,16 @@ Have you ever wondered how AI chatbots can grasp your questions and reply so eff
 
 ## Visual overview of LLM processing flow
 
-<!-- 
-```
-Note replaced two dashes to one dash -> as a work around 
+```mermaid
 graph TD
-    Input["User Input"] -> RAG["RAG"]
-    RAG -> VectorDB["Vector DB"]
-    RAG -> MCP["MCP Server"]
-    VectorDB -> LLM["LLM"]
-    MCP -> LLM
-    RAG -> LLM
-    LLM -> Output["Output"]
+    Input["User Input"] --> RAG["RAG"]
+    RAG --> VectorDB["Vector DB"]
+    RAG --> MCP["MCP Server"]
+    VectorDB --> LLM["LLM"]
+    MCP --> LLM
+    RAG --> LLM
+    LLM --> Output["Output"]
 ```
--->
 
 ![Flow Diagram](<LLM FLow diagram.png>) 
 

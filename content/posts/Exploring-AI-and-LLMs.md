@@ -29,7 +29,6 @@ Have you ever wondered how AI chatbots can grasp your questions and reply so eff
 
 ## Visual overview of LLM processing flow
 
-
 <!-- 
 ```
 Note replaced two dashes to one dash -> as a work around 
@@ -44,7 +43,7 @@ graph TD
 ```
 -->
 
-![ ](<../../static/images/LLM FLow diagram.png>)
+![Flow Diagram](<LLM FLow diagram.png>) 
 
 ## AI made simple: Understanding the flowchart and transformers with a library analogy
 

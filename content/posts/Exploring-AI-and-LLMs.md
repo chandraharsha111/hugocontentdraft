@@ -14,11 +14,11 @@ series = []
 # From Input to Insight: Exploring AI and LLMs
   <!-- Inside AI Magic: Understanding LLM Processing -->
 
-Have you ever wondered how AI chatbots can grasp your questions and reply so effectively? This guide walks you through how they work, starting with basic ideas and moving to deeper technical insights. These chatbots backed by LLM's processes information in a structured order, drawing on multiple sources to improve its responses. Each step below is enhanced with concepts from [How LLMs see the world](https://blog.bytebytego.com/p/how-llms-see-the-world?utm_source=publication-search), including in-depth details on tokens, embedding, positioning, and transformer mechanics.
+Have you ever wondered how AI chatbots can grasp your questions and reply so effectively? This guide walks you through how they work, starting with basic ideas and moving to deeper technical insights. 
 
 ## Table of contents
 
-- [Understanding AI basics](#ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy)
+- [AI made simple](#ai-made-simple-understanding-the-flowchart-and-transformers-with-a-library-analogy)
 - [Core components of LLMs](#component-spotlights-key-elements-of-the-llm-process)
 - [Exploring AI models and technology](#llm-landscape-comparing-leading-models)
 - [Agentic AI and workflows](#agentic-systems-and-automated-workflows)
@@ -30,9 +30,11 @@ Have you ever wondered how AI chatbots can grasp your questions and reply so eff
 
 This analogy provides a foundational understanding of AI processes. As we progress, we'll explore the technical details behind these components.
 
-Whether you're new to technology or just curious, understanding how intelligent language systems like chatbots or AI assistants operate can feel a bit overwhelming at first. Let's simplify it by breaking down the flowchart in this document and the concept of "transformers" (the core engine behind these systems) using relatable, everyday examples.
+Whether you're new to technology or just curious, understanding how intelligent language systems like chatbots or AI assistants operate can feel a bit overwhelming at first. Let's simplify it by breaking down the flowchart in this document and the concept of "transformers" (the core engine behind these systems) using relatable, everyday examples and using the following AI magic flowchart.
 
-**The Flow Chart Explained – Like a Helpful Team at a Library:**
+![AI magic](</images/LLM FLow diagram.png>)
+
+**Flow Chart Explained:**
 [This flowchart](https://drive.google.com/file/d/1-bLxq_8jfmhl4E9vJAfcxbwuzF4eN6S3/view?usp=sharing) shows the steps an AI system takes to answer your questions. Imagine you’re at a magical library where a team works together to help you:
 
 - **User input:** This is you walking up to the librarian’s desk with a question, like “Tell me about dinosaurs.”
@@ -44,7 +46,7 @@ Whether you're new to technology or just curious, understanding how intelligent 
 
 The arrows in the flowchart show how information moves from you, through the team, and back with an answer. The whole team collaborates to ensure the answer is thorough and accurate.
 
-**How Transformers Work – Continuing the Library Analogy:**
+**How Transformers Work – Continuing the library analogy:**
 Transformers are the “thinking engine” inside the LLM part of our flowchart. They’re not a physical thing but a clever way the computer learns to understand and create language. Building on our library analogy, let’s see how a master librarian within this magical library expertly processes every detail of your question to craft the perfect response.
 
 - **Cataloging words:** When you ask a question, the master librarian breaks it down into individual pieces (like words) and organizes each piece into a detailed catalog card that holds its meaning.
@@ -60,7 +62,7 @@ Now that we've covered the basics, let's dive deeper into the technical componen
 
 ---
 
-## Component Spotlights: Key Elements of the LLM Process
+## Component Spotlights: Key elements of the LLM Process
 
 ### User Input
 
@@ -88,7 +90,7 @@ The *vector database* powers semantic search:
 
 ### MCP Server
 
-For live, dynamic, or specialized data, the system calls the *MCP Server*:
+For live, dynamic, or specialized data, the system calls the *MCP Server* using the Model Context Protocol introduced by Anthropic in late 2024 to provide context from external sources to LLM's:
 
 - **Access provision**: Provides access to tools (*APIs*, calculators, real-time data sources) or proprietary datasets not within the standard training or vector DB.
 - **Data processing**: These results are processed—tokenized and embedded—and then injected into the token stream/context considered by the LLM, offering real-time augmentation.
@@ -147,7 +149,7 @@ The LLM produces its final prediction:
 Transformers are the foundation of modern LLMs, introduced in the seminal paper [Attention is All You Need (2017)](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf). They revolutionized natural language processing by replacing sequential processing (like in older models such as Recurrent Neural Networks (RNNs) or Long Short-Term Memory networks (LSTMs)) with **parallel processing**, leveraging **attention mechanisms** to model relationships between words, no matter how far apart they are in a sentence. This section expands on concepts from ["How Transformers Architecture Works"](https://blog.bytebytego.com/i/163736711/how-transformers-architecture-works) to provide a deeper understanding.
 
 **Core Structure and Workflow:**
-Transformers consist of an *Encoder* and a *Decoder*, each made up of multiple layers. The encoder processes the input sequence, while the decoder generates the output sequence. In many LLMs, especially *autoregressive models* like GPT, often only the decoder part is used for tasks like text generation.
+Transformers consist of an *Encoder* and a *Decoder*, each made up of multiple layers. The encoder processes the input sequence, while the decoder generates the output sequence. In many LLMs, especially *autoregressive models* like GPT, often only the decoder part is used for tasks like text generation. These LLM's processes information in a structured order, drawing on multiple sources to improve its responses. Each step below is enhanced with concepts from [How LLMs see the world](https://blog.bytebytego.com/p/how-llms-see-the-world?utm_source=publication-search), including in-depth details on tokens, embedding, positioning, and transformer mechanics.
 
 - **Token embeddings**: Each input *token* (word or subword) is converted into a high-dimensional vector (e.g., 512 or 768 dimensions) that captures its semantic meaning. Think of this as translating words into a "language" of numbers that a computer can understand.
 - **Positional encoding**: Since transformers process all tokens simultaneously (not sequentially), they add *positional information* to embeddings to indicate the order of words in a sentence. This can be a fixed sinusoidal function or learned during training, ensuring the model knows "where" each token is in the sequence.
@@ -231,7 +233,7 @@ Within our flowchart, Agentic AI goes beyond the "LLM" and "Output" stages, loop
 **Evolution of Generative AI with Automated Workflows and Agentic AI**
 The progression of Generative AI can be seen as a sequential journey from basic automation and text generation to sophisticated, goal-oriented, and autonomous systems:
 
-- **Early Stage - Automation and Basic Tools:** Before advanced AI, automation relied on rule-based systems and simple scripts for repetitive tasks, setting the stage for integrating intelligence into workflows.
+- **Early Stage - Automation and basic tools:** Before advanced AI, automation relied on rule-based systems and simple scripts for repetitive tasks, setting the stage for integrating intelligence into workflows.
 - **Content Generation with Generative AI:** Early Generative AI models, such as GPT-2, focused on producing text or media based on prompts, mainly operating at the "LLM" and "Output" stages of our workflow.
 - **Contextual Enhancement:** With techniques like RAG and Vector DB, AI evolved to incorporate external knowledge, making responses more informed and relevant—a significant step in handling real-world queries.
 - **Systemic Integration (Automated Workflows):** Automated Workflows integrate Generative AI into broader operational frameworks, automating multi-step processes and linking all parts of our flowchart (from Input to Output) into streamlined, efficient systems, building on earlier automation concepts.
@@ -263,3 +265,10 @@ This document draws inspiration and technical insights from the following source
 - [How LLMs see the world](https://blog.bytebytego.com/p/how-llms-see-the-world?utm_source=publication-search) - Provides detailed explanations on tokens, embeddings, positioning, and transformer mechanics.
 - [How Transformers Architecture Works](https://blog.bytebytego.com/i/163736711/how-transformers-architecture-works) - Offers an in-depth look at the transformer architecture that powers modern LLMs.
 - [Attention is All You Need (2017)](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) - Introduces the transformer model and attention mechanisms fundamental to modern LLMs.
+
+### Youtube References
+- [AI, Machine Learning, Deep Learning and Generative AI Explained](https://www.youtube.com/watch?v=qYNweeDHiyU&ab_channel=IBMTechnology)
+- [How Large Language Models Work](https://www.youtube.com/watch?v=5sLYAQS9sWQ&ab_channel=IBMTechnology)
+- [What is a Vector Database?](https://www.youtube.com/watch?v=gl1r1XV0SLw&ab_channel=IBMTechnology)
+- [What is Retrieval-Augmented Generation (RAG)?](https://www.youtube.com/watch?v=T-D1OfcDW1M&ab_channel=IBMTechnology)
+- [Generative vs Agentic AI](https://www.youtube.com/watch?v=EDb37y_MhRw&ab_channel=IBMTechnology)
